@@ -1,0 +1,154 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: #efefef;
+  min-height: 100%;
+ 
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #040506;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.logo img {
+    height: 40px;
+    padding-right: 5px;
+}
+
+.foto {
+    display: flex;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#inicio {
+    background-color: red;
+}
+
+#inicio a {
+    color: white;
+}
+
+ul li:hover {
+    background-color: white;
+    transition: 1s;
+
+}
+
+li a:hover {
+    color: black;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+ul li {
+    padding: 10px;
+}
+
+nav a button {
+    height: 100%;
+}
+ 
+button {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 4px;
+    border: 1px solid #ffff;
+    color: #ffff;
+    font-weight: 600;
+}
+
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+.pqrs {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .pqrs h2 {
+    margin-bottom: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+.inc > button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}  

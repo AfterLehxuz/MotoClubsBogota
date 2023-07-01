@@ -1,0 +1,160 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside .log {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    gap: 10px;
+}
+
+.log > img {
+    height: 40px;
+}
+
+aside ul > li {
+    padding:  20px;
+    
+}
+
+aside ul li  a > span {
+    margin: 10px;
+    color: white;
+}
+aside ul li {
+    text-transform: uppercase;
+}
+aside ul li:hover{
+    background-color: red;
+    transition: 1s;
+}
+aside ul li a {
+    color: white;
+}
+.contenido{
+    margin-left: 200px;
+}
+
+.contenido header{
+    height: 50px;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.contenido-buscar{
+    height: 30px;
+    width: 250px;
+    background-color: yellowgreen;
+    position: relative;  
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.contenido-buscar:hover{
+    width: 350px;
+    transition: 1s;
+}
+.contenido-buscar input{
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+}
+
+.contenido-buscar span{
+    position: absolute;
+    line-height: 30px;
+    font-size: 20px;
+    color: gray;
+}
+
+.contenido-perfil {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido-perfil > img {
+    border-radius: 12px;
+}
+
+.contenido-perfil span {
+    padding: 0 10px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.contenido-perfil span:hover {
+    color: red;
+}
+
+.foto {
+    display: flex;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.reservas {
+    position: relative;
+    margin: 40px 20px;
+    border: 2px solid black;
+    height: 500px;
+    display: flex;
+    justify-content: center ;
+}
+button {
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 4px;
+    border: 1px solid #ffff;
+    color: #ffff;
+    font-weight: 600;
+}
+
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
