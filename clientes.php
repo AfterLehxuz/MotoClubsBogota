@@ -1,110 +1,111 @@
 <?php
 session_start();
-
-// Incluir archivo de conexión
 require_once "conexion.php";
 
-// Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION["nombre"]) || empty($_SESSION["nombre"])) {
-  // Redirigir al formulario de inicio de sesión si el usuario no ha iniciado sesión
   header("Location: login.php");
   exit;
 }
 
-// Obtener los datos del usuario de la base de datos
-$nombreUsuario = $_SESSION["nombre"];
-
-// Consultar los datos del usuario
-$query = "SELECT * FROM usuarios WHERE nombre = '$nombreUsuario'";
-$result = $conn->query($query);
-
-if ($result->num_rows > 0) {
-  // El usuario fue encontrado en la base de datos
-  $row = $result->fetch_assoc();
-
-  // Extraer los datos del usuario
-  $nombre = $row["nombre"];
-  $email = $row["email"];
-  $telefono = $row["numero"];
-} else {
-  // El usuario no fue encontrado en la base de datos
-  // Manejar el caso apropiado, como mostrar un mensaje de error o redirigir a una página de error
+if (!isset($_SESSION["rol_idRol"]) || $_SESSION["rol_idRol"] != 1) {
+  header("Location: acceso_denegado.php");
+  exit;
 }
+$sql = "SELECT u.*, r.nombre as nombre_rol 
+        FROM usuarios u 
+        INNER JOIN rol r ON u.rol_idRol = r.idRol
+        WHERE u.idUsuarios = ?"; 
 
-// Consultar los datos de todos los usuarios registrados
-$registroQuery = "SELECT * FROM usuarios";
-$registroResult = $conn->query($registroQuery);
+$stmt = $conn->prepare($sql);
+
+$stmt->bind_param("i", $_SESSION["rol"]);
+
+$stmt->execute();
+
+$resultado = $stmt->get_result();
+
+$usuario = $resultado->fetch_assoc();
+
+$stmt->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="Estilos/perfil.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="javaScript/clientes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="Estilos/pqrsdb.css">
   <title>Document</title>
 </head>
+
 <body>
   <aside>
-    <a href="dashboard.php" class="log"><img src="Logo .png" alt="logo">Moto Club</a>
-    <ul>
-      <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
-      <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
-      <li><a href="#"><span><i class='bx bx-check-double'></i></span>Reservas</a></li>
-      <li><a href="#"><span><i class='bx bx-question-mark'></i></span>PQRS</a></li>
-      <li><a href="#"><span><i class='bx bx-briefcase'></i></span>clientes</a></li>
-    </ul>
+  <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
+        <ul>
+            <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
+                <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
+            <?php endif; ?>
+            <li><a href="reservadb.php"><span><i class='bx bx-check-double'></i></span>Reservas</a></li>
+            <li><a href="pqrsdb.php"><span><i class='bx bx-question-mark'></i></span>PQRS</a></li>
+            <?php if ($_SESSION["rol_idRol"] == 1): ?>
+                <li><a href="clientes.php"><span><i class='bx bx-question-mark'></i></span>Clientes</a></li>
+            <?php endif; ?>
+            <li><a href="reportes.php"><span><i class='bx bx-question-mark'></i></span>Reportes</a></li>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
+                <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
+            <?php endif; ?>
+        </ul>
   </aside>
   <div class="contenido">
     <header>
-      <div class="contenido-buscar">
-        <span><i class='bx bx-search-alt-2'></i></span>
-        <input type="search" placeholder="Buscar">
+    <div class="contenido-rol">
+        <span>
+          <?php echo $usuario['nombre_rol']; ?>
+        </span>
       </div>
       <div class="contenido-perfil">
-        <span><i class='bx bx-bell'></i></span>
-        <span><i class='bx bx-message-dots'></i></span>
         <?php if (isset($_SESSION["nombre"]) && !empty($_SESSION["nombre"])): ?>
           <div class="foto">
-            <span class="nombre-usuario"><?php echo $_SESSION["nombre"]; ?></span>
+            <span class="nombre-usuario">
+              <?php echo $_SESSION["nombre"]; ?>
+            </span>
           </div>
           <a href="logout.php"><button>Cerrar sesión</button></a>
         <?php endif; ?>
       </div>
     </header>
-   
-    <div class="registro">
-    <h2>Usuarios Registrados</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Email</th>
-          <th>Teléfono</th>
-          <th>Rol</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php while ($registroRow = $registroResult->fetch_assoc()): ?>
-          <tr>
-            <td><?php echo $registroRow["nombre"]; ?></td>
-            <td><?php echo $registroRow["email"]; ?></td>
-            <td><?php echo $registroRow["numero"]; ?></td>
-            <td><?php echo $registroRow["rol"]; ?></td>
-            <td>
-              <a href="editar.php?id=<?php echo $registroRow["idUsuario"]; ?>">Editar</a>
-              <a href="eliminar.php?id=<?php echo $registroRow["idUsuario"]; ?>">Eliminar</a>
-              <a href="asignarRol.php?idUsuario=<?php echo $registroRow["idUsuario"]; ?>">Asignar Rol</a>
-            </td>
-          </tr>
-        <?php endwhile; ?>
-      </tbody>
-    </table>
+
+    <div class="perfil">
+      <div class="reservas-inicio">
+        <h1>Usuarios Registrados</h2>
+          <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Documento</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Dirreccion</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="t_inf">
+            </tbody>
+          </table>
+      </div>
+    </div>
   </div>
 
-  </div>
 </body>
+
 </html>

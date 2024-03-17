@@ -5,7 +5,7 @@
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 li {
@@ -56,7 +56,7 @@ aside ul li:hover {
 }
 
 aside ul li a {
-    color: white;
+    color: #ffffff !important
 }
 
 .contenido {
@@ -73,37 +73,16 @@ aside ul li a {
     padding: 0 10px;
 }
 
-.contenido-buscar {
-    height: 30px;
-    width: 250px;
-    background-color: yellowgreen;
-    position: relative;
-    display: flex;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-.contenido-buscar:hover {
-    width: 350px;
-    transition: 1s;
-}
-
-.contenido-buscar input {
-    height: 100%;
-    width: 100%;
-    padding: 0 20px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-}
-
-.contenido-buscar span {
-    position: absolute;
-    line-height: 30px;
-    font-size: 20px;
-    color: gray;
-}
-
+.contenido-rol {
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    border-radius: 5px;
+    text-align: center; 
+    font-size: 16px; 
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
 .contenido-perfil {
     padding: 5px;
     display: flex;

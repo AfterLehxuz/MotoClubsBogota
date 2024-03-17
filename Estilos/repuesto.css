@@ -1,0 +1,164 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+ 
+  min-height: 100%;
+  font-size: 16px;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #040506;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.logo img {
+    height: 40px;
+    padding-right: 5px;
+}
+
+.foto {
+    display: flex;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#inicio {
+    background-color: red;
+}
+
+#inicio a {
+    color: white;
+}
+
+ul li:hover {
+    background-color: white;
+    transition: 1s;
+
+}
+
+li a:hover {
+    color: black;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+ul li {
+    padding: 10px;
+}
+
+nav a button {
+    height: 100%;
+}
+ 
+button {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 4px;
+    border: 1px solid #ffff;
+    color: #ffff;
+    font-weight: 600;
+}
+
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+.productos-recientes {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.productos-recientes .producto img{
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+
+.productos-recientes .producto{
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.productos-recientes .producto h2{
+    font-weight: 500;
+    font-size: 1.6em;
+}
+.productos-recientes .producto .btn-carrito{
+    background-color: #353432;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 1s, color 1s; 
+}
+
+
+.producto .btn-carrito:hover{
+    background-color: white;
+    color: black;
+    
+}
+
+.contenedor {
+    width:100vw;
+    max-width: 90vw;
+    margin: auto ;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+
+

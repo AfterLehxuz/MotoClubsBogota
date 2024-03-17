@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside .log {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    gap: 10px;
+}
+
+.log > img {
+    height: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+aside ul > li {
+    padding: 20px;
+}
+
+aside ul li a > span {
+    margin: 10px;
+    color: white;
+}
+
+aside ul li {
+    text-transform: uppercase;
+}
+
+aside ul li:hover {
+    background-color: red;
+    transition: 1s;
+}
+
+aside ul li a {
+    color: #ffffff !important
+}
+
+.contenido {
+    margin-left: 200px;
+}
+
+.contenido header {
+    height: 50px;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.contenido-rol {
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    border-radius: 5px;
+    text-align: center; 
+    font-size: 16px; 
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+.contenido-perfil {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenido-perfil > img {
+    border-radius: 12px;
+}
+
+.contenido-perfil span {
+    padding: 0 10px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.contenido-perfil span:hover {
+    color: red;
+}
+
+.foto {
+    display: flex;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.perfil {
+    position: relative;
+    margin: 40px 20px;
+    border: 2px solid black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+button {
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 4px;
+    border: 1px solid #ffff;
+    color: #ffff;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+
+.perfil h1 {
+    margin: 20px 0; 
+    font-size: 24px;
+    text-align: center; 
+}
+
+.perfil h2{
+    text-align: center; 
+}
+
+.perfil form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.perfil label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.perfil input,
+.perfil textarea {
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.perfil input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    padding: 10px;
+    gap: 20px;
+    display: grid;
+}
+
+.table,
+.table th,
+.table td {
+    border: 1px solid #ddd;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.table th {
+    background-color: red;
+}
+
+.table img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+button {
+    background-color: #4caf50;
+}
+
+
+.ui-autocomplete {
+    max-height: 150px;
+    width: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.ui-menu-item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.ui-state-focus,
+.ui-state-active {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.todos-los-productos{
+    padding-top: 10px;
+}
+
+.productos-en-tabla{
+    margin-bottom: 20px;
+}
+.reservas-inicio{
+    overflow: hidden;
+    padding: 10px;
+}
+.editar-producto {
+    background-color: #007bff; 
+    color: white;
+    border: none; 
+    padding: 8px 16px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 14px; 
+    margin: 4px 2px;
+    cursor: pointer; 
+}
+
+.editar-producto i {
+    margin-right: 5px; 
+}

@@ -13,13 +13,12 @@
     <header>
         <a href="#" class="logo"> <img src="imagenes/Logo .png" alt="Icono de la empresa">Moto Club</a>
         <nav>
-            <ul>
-                <li id="inicio"><a href="#" >Inicio</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Repuestos</a></li>
-                <li><a href="#">PQRS</a></li>
-                <li><a href="#">Contactos</a></li>
-               
+        <ul>
+                <li id="inicio"><a href="index.php">Inicio</a></li>
+                <li><a href="reserva.php">Reservas</a></li>
+                <li><a href="repuestos.php">Repuestos</a></li>
+                <li><a href="pqrs.php">PQRS</a></li>
+                <li><a href="contactos.php">Contactos</a></li>
             </ul>   
             <button>Iniciar sesión</button>         
         </nav>

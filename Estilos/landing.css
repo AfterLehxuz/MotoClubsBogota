@@ -8,6 +8,7 @@
 body{
   background-color: #efefef;
   min-height: 100%;
+  
  
 }
 
@@ -208,3 +209,4 @@ button:hover {
     overflow: hidden;
     text-align: center;
 }
+    

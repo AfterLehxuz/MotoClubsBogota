@@ -5,7 +5,7 @@
   }
   
   a {
-    text-decoration: none;
+    text-decoration: none !important;
   }
   
   li {
@@ -56,7 +56,7 @@
   }
   
   aside ul li a {
-    color: white;
+    color: #ffffff !important
   }
   
   .contenido {

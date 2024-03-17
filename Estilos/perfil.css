@@ -5,7 +5,7 @@
   }
   
   a {
-    text-decoration: none;
+    text-decoration: none !important;
   }
   
   li {
@@ -56,7 +56,7 @@
   }
   
   aside ul li a {
-    color: white;
+    color: #ffffff !important
   }
   
   .contenido {
@@ -73,36 +73,16 @@
     padding: 0 10px;
   }
   
-  .contenido-buscar {
-    height: 30px;
-    width: 250px;
-    background-color: yellowgreen;
-    position: relative;
-    display: flex;
-    border: 1px solid black;
-    border-radius: 10px;
+  .contenido-rol {
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    border-radius: 5px;
+    text-align: center; 
+    font-size: 16px; 
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .contenido-buscar:hover {
-    width: 350px;
-    transition: 1s;
-  }
-  
-  .contenido-buscar input {
-    height: 100%;
-    width: 100%;
-    padding: 0 20px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-  }
-  
-  .contenido-buscar span {
-    position: absolute;
-    line-height: 30px;
-    font-size: 20px;
-    color: gray;
-  }
   
   .contenido-perfil {
     padding: 5px;
@@ -122,6 +102,7 @@
     color: white;
     cursor: pointer;
   }
+
   
   .contenido-perfil span:hover {
     color: red;
@@ -164,20 +145,20 @@
     transition: 1s;
   }
   
-  table {
+  .perfil-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
   }
-  
-  th,
-  td {
+
+  .perfil-table th,
+  .perfil-table td {
+    border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
   }
-  
-  th {
+
+  .perfil-table th {
     background-color: #f2f2f2;
   }
   

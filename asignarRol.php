@@ -1,111 +1,64 @@
 <?php
 session_start();
-
-// Verificar si el usuario ha iniciado sesión
-if (!isset($_SESSION["nombre"]) || empty($_SESSION["nombre"])) {
-  // Redirigir al formulario de inicio de sesión si el usuario no ha iniciado sesión
-  header("Location: login.php");
-  exit;
-}
-
-// Incluir archivo de conexión
 require_once "conexion.php";
 
-// Verificar si se recibió el ID del usuario por GET o POST
-if (isset($_REQUEST["idUsuario"])) {
-  $idUsuario = $_REQUEST["idUsuario"];
+if (isset($_POST["idUsuario"]) && isset($_POST["nuevoRol"])) {
+   
+    $idUsuario = $_POST["idUsuario"];
+    $nuevoRol = $_POST["nuevoRol"];
 
-  // Obtener los datos del usuario por ID
-  $query = "SELECT * FROM usuarios WHERE idUsuario = $idUsuario";
-  $result = $conn->query($query);
+   
+    $queryRolAnterior = "SELECT rol_idRol FROM usuarios WHERE idUsuarios = ?";
+    $stmtRolAnterior = $conn->prepare($queryRolAnterior);
+    $stmtRolAnterior->bind_param("i", $idUsuario);
+    $stmtRolAnterior->execute();
+    $stmtRolAnterior->store_result();
+    $stmtRolAnterior->bind_result($rolAnterior);
+    $stmtRolAnterior->fetch();
 
-  if ($result->num_rows > 0) {
-    // El usuario fue encontrado en la base de datos
-    $row = $result->fetch_assoc();
+    $queryActualizarRol = "UPDATE usuarios SET rol_idRol = ? WHERE idUsuarios = ?";
+    $stmtActualizarRol = $conn->prepare($queryActualizarRol);
+    $stmtActualizarRol->bind_param("ii", $nuevoRol, $idUsuario);
 
-    // Extraer los datos del usuario
-    $nombre = $row["nombre"];
-    $email = $row["email"];
-    $telefono = $row["numero"];
+    if ($stmtActualizarRol->execute()) {
+        if ($nuevoRol == 4) {
+            $queryInsertarTecnico = "INSERT INTO tecnico (usuario_idUsuario, disponible) VALUES (?, 1)";
+            $stmtInsertarTecnico = $conn->prepare($queryInsertarTecnico);
+            $stmtInsertarTecnico->bind_param("i", $idUsuario);
 
-    // Verificar si se recibió el rol por POST
-    if (isset($_POST["rol"])) {
-      $nuevoRol = $_POST["rol"];
+            if ($stmtInsertarTecnico->execute()) {
+                echo json_encode(array("success" => true));
+            } else {
+                echo json_encode(array("success" => false, "error" => "Error al insertar en la tabla de técnicos"));
+            }
 
-      // Actualizar el rol del usuario
-      $updateQuery = "UPDATE usuarios SET rol = '$nuevoRol' WHERE idUsuario = $idUsuario";
-      $conn->query($updateQuery);
+            $stmtInsertarTecnico->close();
+        } else {
+            
+            if ($rolAnterior == 4) {
+                $queryEliminarTecnico = "DELETE FROM tecnico WHERE usuario_idUsuario = ?";
+                $stmtEliminarTecnico = $conn->prepare($queryEliminarTecnico);
+                $stmtEliminarTecnico->bind_param("i", $idUsuario);
 
-      // Redirigir de vuelta a la página de clientes después de asignar el rol
-      header("Location: clientes.php");
-      exit;
+                if ($stmtEliminarTecnico->execute()) {
+                    echo json_encode(array("success" => true));
+                } else {
+                    echo json_encode(array("success" => false, "error" => "Error al eliminar de la tabla de técnicos"));
+                }
+
+                $stmtEliminarTecnico->close();
+            } else {
+                echo json_encode(array("success" => true));
+            }
+        }
+    } else {
+        echo json_encode(array("success" => false, "error" => "Error al actualizar el rol del usuario"));
     }
-  } else {
-    // El usuario no fue encontrado en la base de datos
-    // Manejar el caso apropiado, como mostrar un mensaje de error o redirigir a una página de error
-  }
+
+    $stmtActualizarRol->close();
+    $stmtRolAnterior->close();
+    $conn->close();
 } else {
-  // Si no se proporcionó el ID del usuario, redirigir a la página de clientes
-  header("Location: clientes.php");
-  exit;
+    echo json_encode(array("success" => false, "error" => "Parámetros incompletos"));
 }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="Estilos/asignarRol.css">
-  <title>Document</title>
-</head>
-<body>
-  <aside>
-    <a href="dashboard.php" class="log"><img src="Logo .png" alt="logo">Moto Club</a>
-    <ul>
-      <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
-      <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
-      <li><a href="#"><span><i class='bx bx-check-double'></i></span>Reservas</a></li>
-      <li><a href="#"><span><i class='bx bx-question-mark'></i></span>PQRS</a></li>
-      <li><a href="#"><span><i class='bx bx-briefcase'></i></span>clientes</a></li>
-    </ul>
-  </aside>
-  <div class="contenido">
-    <header>
-      <div class="contenido-buscar">
-        <span><i class='bx bx-search-alt-2'></i></span>
-        <input type="search" placeholder="Buscar">
-      </div>
-      <div class="contenido-perfil">
-        <span><i class='bx bx-bell'></i></span>
-        <span><i class='bx bx-message-dots'></i></span>
-        <?php if (isset($_SESSION["nombre"]) && !empty($_SESSION["nombre"])): ?>
-          <div class="foto">
-            <span class="nombre-usuario"><?php echo $_SESSION["nombre"]; ?></span>
-          </div>
-          <a href="logout.php"><button>Cerrar sesión</button></a>
-        <?php endif; ?>
-      </div>
-    </header>
-   
-   
-  </div>
-<div class="asignar-rol">
-  <h2>Asignar Rol</h2>
-  <form action="asignarRol.php" method="POST">
-    <input type="hidden" name="idUsuario" value="<?php echo $row['idUsuario']; ?>">
 
-    <label for="rol">Seleccionar Rol:</label>
-    <select name="rol" id="rol">
-      <option value="administrador">Administrador</option>
-      <option value="empleado">Empleado</option>
-      <option value="cliente">Cliente</option>
-    </select>
-
-    <button type="submit">Asignar Rol</button>
-  </form>
-</div>
-  </div>
-</body>
-</html>

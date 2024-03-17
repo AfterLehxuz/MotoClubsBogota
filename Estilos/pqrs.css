@@ -1,14 +1,12 @@
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-  background-color: #efefef;
-  min-height: 100%;
- 
+body {
+    background-color: #efefef;
+    min-height: 100%;
 }
 
 header {
@@ -42,7 +40,6 @@ header {
     border-radius: 5px;
 }
 
-
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -65,7 +62,6 @@ nav ul {
 ul li:hover {
     background-color: white;
     transition: 1s;
-
 }
 
 li a:hover {
@@ -84,7 +80,7 @@ ul li {
 nav a button {
     height: 100%;
 }
- 
+
 button {
     margin-right: 10px;
     margin-left: 10px;
@@ -96,59 +92,104 @@ button {
     font-weight: 600;
 }
 
-
 button:hover {
     background-color: white;
     color: black;
     transition: 1s;
 }
-.pqrs {
+
+.reservas {
+    font-size: 1.2em;
+    display: grid;
+    width: 70%;
+    height: 700px;
+    margin: 50px auto; 
     padding: 20px;
     background-color: #f7f7f7;
     border: 1px solid #ccc;
     margin-bottom: 20px;
-  }
-  
-  .pqrs h2 {
+    gap: 20px;
+    box-shadow: 0 30px 30px rgba(0,0,0, 0.2);
+    text-align: center;
+    justify-content: baseline;
+    
+}
+
+.servicios {
+    width: 100%;
+    display: grid;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(0,0,0, 0.2);
+    text-align: left;
+    border-radius: 5px;
+    padding: 8px;
+   
+}
+
+.servicios h1{
+    font-size: 2em;
+}
+
+.div-reserva{
+    display: grid;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(0,0,0, 0.2);
+    text-align: left;
+    border-radius: 5px;
+    padding: 8px;
+    
+}
+.div-reserva img{
+    padding-left: 150px;
+    width: 60%;
+    height: auto;
+    
+}
+
+.reservas h2 {
     margin-bottom: 10px;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: 10px;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
     width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  button[type="submit"] {
+}
+
+#enviarBtn {
     background-color: #4caf50;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
+}
+
+#enviarBtn:hover {
     background-color: #45a049;
-  }
-.inc > button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}  
+}
+
+#servicio {
+    width: 450px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+ }

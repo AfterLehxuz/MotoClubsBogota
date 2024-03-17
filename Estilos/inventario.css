@@ -5,7 +5,7 @@
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 li {
@@ -56,7 +56,7 @@ aside ul li:hover {
 }
 
 aside ul li a {
-    color: white;
+    color: #ffffff !important
 }
 
 .contenido {
@@ -210,4 +210,24 @@ button:hover {
     margin-top: 16px;
     color: red;
     font-weight: bold;
+}
+/* Agrega estos estilos a tu archivo de estilos existente (por ejemplo, estilos.css) */
+
+/* Estilos para el botón de editar y su icono */
+.editar-producto {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 8px 16px; /* Relleno */
+    text-align: center; /* Alineación del texto al centro */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block;
+    font-size: 14px; /* Tamaño de la fuente */
+    margin: 4px 2px;
+    cursor: pointer; /* Cursor apuntando */
+}
+
+/* Estilos específicos para el icono dentro del botón de editar */
+.editar-producto i {
+    margin-right: 5px; /* Espacio a la derecha del icono */
 }
