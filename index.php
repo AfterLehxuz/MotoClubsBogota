@@ -18,7 +18,9 @@ session_start();
 
 <body>
     <header>
-        <a href="index.html" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club</a>
+    <a href="index.php" class="logo"> 
+        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club
+    </a>
         <nav>
             <ul>
                 <li id="inicio"><a href="index.php">Inicio</a></li>
@@ -46,7 +48,9 @@ session_start();
         <div class="Informacion">
             <H1>Proporcionamos la mejor estrategía<br>
                 para el cuidado y mantenimiento de tu moto</H1>
-            <button>DESCUBRE AQUÍ</button>
+            <a href="contactos.php">
+               <button> DESCUBRE AQUÍ</button>
+            </a>
         </div>
         <div class="informacion-detallada">
             <div class="informacion-detallada-contenido">

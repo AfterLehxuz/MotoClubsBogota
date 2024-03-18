@@ -20,7 +20,7 @@ session_start();
 <body>
     <header>
         <a href="index.php" class="logo">
-            <img src="Imagenes/Logo .png" alt="Icono de la empresa">Moto Club
+            <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club
         </a>
         <nav>
             <ul>
