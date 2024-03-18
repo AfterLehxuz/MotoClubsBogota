@@ -58,7 +58,8 @@
   
   aside ul li:hover {
     background-color: red;
-    transition: 1s;
+  transition: 1s;    
+  border-radius: 5%;
   }
   
   aside ul li a {

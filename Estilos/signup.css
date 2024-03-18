@@ -44,6 +44,8 @@ nav ul {
 
 #inicio {
     background-color: red;
+    transition: 1s;    
+    border-radius: 5%;
 }
 
 #inicio a {
