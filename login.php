@@ -18,15 +18,14 @@ if (isset($_SESSION["rol"])) {
     <link rel="stylesheet" href="Estilos/login.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="Imagenes/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <script src="javaScript/login_ajax.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Document</title>
+    <title>Iniciar Sesión</title>
 </head>
 
 <body>
     <header>
-        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club</a>
+        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota</a>
         <nav>
             <ul>
                 <li id="inicio"><a href="index.php">Inicio</a></li>
@@ -41,7 +40,7 @@ if (isset($_SESSION["rol"])) {
     <section class="fondo">
         <div class="iniciar-secion">
             <div class="iniciar-secion_inicio">
-                <h1>inicia sesión</h1>
+                <h1>Iniciar Sesión</h1>
 
                 <form method="POST">
                     <div class="input">
@@ -49,7 +48,7 @@ if (isset($_SESSION["rol"])) {
                         <input type="email" name="email" placeholder="Correo electrónico">
                     </div>
                     <div class="input">
-                        <span><i class='bx bx-lock-alt'></i></span>
+                        <span><i class='bx bx-lock-open-alt'></i></span>
                         <input type="password" name="password" placeholder="Contraseña">
                     </div>
                     <div class="recordar">

@@ -10,14 +10,15 @@
     <link rel="shortcut icon" href="Estilos/imagenes/logo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <script src="javaScript/repuestos_ajax.js"></script>
-    <title>PQRS</title>
+    <title>Repuestos</title>
 </head>
 
 <body>
     <header>
     <a href="index.php" class="logo"> 
-        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club
+        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota
     </a>
         <nav>
             <ul>

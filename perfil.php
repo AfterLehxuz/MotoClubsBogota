@@ -38,12 +38,13 @@ $stmt->close();
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="javaScript/informacion_perfil.js"></script>
   <link rel="stylesheet" href="Estilos/perfil.css">
-  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+  <title>Perfil</title>
 </head>
 
 <body>
   <aside>
-    <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
+    <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Clubs Bogota</a>
     <ul>
       <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
       <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>

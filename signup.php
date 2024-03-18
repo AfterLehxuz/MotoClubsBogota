@@ -17,15 +17,16 @@ if (isset($_SESSION["rol"])) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="javaScript/registro_ajax.js"></script>
     <link rel="stylesheet" href="Estilos/signup.css">
+    
     <link rel="stylesheet" href="Estilos/swal.fire.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Registrate</title>
 </head>
 
 <body>
     <header>
-        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club</a>
+        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota</a>
         <nav>
             <ul>
                 <li id="inicio"><a href="index.php">Inicio</a></li>
@@ -42,11 +43,11 @@ if (isset($_SESSION["rol"])) {
             <h1>Registrate</h1>
             <form id="registroForm">
                 <div class="input">
-                    <span><i class='bx bx-envelope'></i></span>
+                    <span><i class='bx bx-id-card'></i></span>
                     <input type="number" name="documentoID" placeholder="Documento de identificación" min="0">
                 </div>
                 <div class="input">
-                    <span><i class='bx bx-envelope'></i></span>
+                    <span><i class='bx bx-user'></i></span>
                     <input type="text" name="nombre" placeholder="Nombre completo">
                 </div>
                 <div class="input">
@@ -54,11 +55,11 @@ if (isset($_SESSION["rol"])) {
                     <input type="number" name="numero" placeholder="Número">
                 </div>
                 <div class="input">
-                    <span><i class='bx bx-envelope'></i></span>
+                    <span><i class='bx bx-envelope '></i></span>
                     <input type="email" name="email" placeholder="Correo electrónico">
                 </div>
                 <div class="input">
-                    <span><i class='bx bx-lock-alt'></i></span>
+                    <span><i class='bx bx-home'></i></span>
                     <input type="text" name="dirreccion" placeholder="Dirreción">
                 </div>
                 <div class="input">

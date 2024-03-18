@@ -12,14 +12,14 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Estilos/landing.css">
-    <link rel="icon" type="image/x-icon" href="Imagenes/favicon.ico">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Moto Clud Bogota</title>
 </head>
 
 <body>
     <header>
     <a href="index.php" class="logo"> 
-        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club
+        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota
     </a>
         <nav>
             <ul>

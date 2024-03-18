@@ -13,14 +13,15 @@ session_start();
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <link rel="stylesheet" href="Estilos/contactos.css">
-    <link rel="shortcut icon" href="Estilos/imagenes/logo .png" type="image/x-icon">
-    <title>Document</title>
+    <link rel="shortcut icon" href="Estilos/imagenes/logo.png" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Contactos</title>
 </head>
 
 <body>
     <header>
     <a href="index.php" class="logo"> 
-        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club
+        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota
     </a>
         <nav>
             <ul>

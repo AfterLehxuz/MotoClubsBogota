@@ -9,7 +9,8 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Reservas</title>
 
     <link rel="stylesheet" href="Estilos/reserva_slide.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
@@ -21,14 +22,14 @@ session_start();
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="javaScript/slider.js"></script>
-    <link rel="icon" type="image/x-icon" href="Imagenes/favicon.ico">
+    
 </head>
 
 
 <body>
     <header>
     <a href="index.php" class="logo"> 
-        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club
+        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota
     </a>
         <nav>
             <ul>
