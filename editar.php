@@ -66,12 +66,13 @@ $stmt->close();
     <script src="javaScript/actualizar_usuarios.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="Estilos/pqrsdb.css">
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <title>Editar Usuario</title>
 </head>
 
 <body>
     <aside>
-        <a href="dashboard.php" class="log"><img src="Logo .png" alt="logo">Moto Club</a>
+    <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Clubs Bogota</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>

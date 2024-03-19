@@ -39,12 +39,14 @@ $stmt->close();
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="javaScript/editar_ajax_perfil.js"></script>
   <link rel="stylesheet" href="Estilos/editar_perfil.css">
-  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+  <title>Editar_Perfil</title>
+  
 </head>
 
 <body>
   <aside>
-    <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
+  <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Clubs Bogota</a>
     <ul>
       <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
       <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>

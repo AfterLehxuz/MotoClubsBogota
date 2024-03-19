@@ -79,12 +79,13 @@ if (isset ($_GET['id']) && !empty ($_GET['id'])) {
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="javaScript/editar_producto.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Editar_Producto</title>
 </head>
 
 <body>
     <aside>
-        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
+    <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Clubs Bogota</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
