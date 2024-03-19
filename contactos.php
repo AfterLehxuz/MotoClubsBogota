@@ -16,6 +16,11 @@ session_start();
     <link rel="shortcut icon" href="Estilos/imagenes/logo.png" type="image/x-icon">
     <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <title>Contactos</title>
+    <style>
+    .logo img {
+        border-radius: 10%; /* Esto hace que la imagen sea redonda */
+    }
+</style>
 </head>
 
 <body>
@@ -55,24 +60,30 @@ session_start();
             medios:</p>
         <div class="info-contacto">
             <div class="item">
-                <i class='bx bx-envelope'></i>
-                <p>correo@motoclub.com</p>
+
+                <i class= 'bx bxl-facebook' style="color: black;"></i>
+                
+                <p> <a href="https://www.facebook.com/Motoclubsbogota/" style="color: black; font-weight: bold;">Moto cluB'S</a></p>
             </div>
+
             <div class="item">
-                <i class='bx bx-phone'></i>
-                <p>(+57) 1 234 5678</p>
+                <i class='bx bxl-whatsapp' style="color: black;"></i>
+                <p> <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%252B573214590866%26data%3DARDHsTjkcwyRnZhocJiP9_KNWuAAVgOelQOYz8LfRR8Ocl27yDJetNv54Ldku2T5eYUQ3Nbtdo73NKf3kZgjgFWriNy1ScbuaQh_S9fvjgmXgCRTs4dwOJ4_kutzAEmkCS7svmg5j9egZFEIOPH7N33sKg%26source%3DFB_Page%26app%3Dfacebook%26entry_point%3Dpage_cta%26fbclid%3DIwAR06mN74HpLTvYjP6ADT1HqISJyxMZtIdt1Dp-4FkENMzJK4armwxvpqyws&h=AT2vWalmizsW0FksxWTmy-BWSFKbS97qJ__N_2K67RyAM2hCxUe1Z_9cFsNrOuwIr6zQX1N4hEMOTLSBxprdPaGp4recoD3NtYmZKZ3GeIDlbZloswtsJUD5jCqqKv7ydQvaOWHokyhpHYP2tpr8SQ" style="color: black; font-weight: bold; "> (+57)321 4590866 </a></p>
             </div>
+
             <div class="item">
-                <i class='bx bx-map'></i>
-                <p>Cra. 12 # 34-56, Bogotá, Colombia</p>
+                <i class='bx bx-map' style="color: black;"></i>
+                <p> <a href="https://www.bing.com/search?pglt=41&q=78h19+Av+Cd+de+Villavicencio%2C+Bogot%C3%A1%2C+Colombia&cvid=0a74a846a5504190a8b3cc238b056ec9&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzM5NGowajGoAgCwAgA&FORM=ANNTA1&adppc=EDGEESS&PC=U531" style="color: black; font-weight: bold; "> 78h19 Av Cd de Villavicencio, Bogotá, Colombia</a></p> </p>
             </div>
+
         </div>
+
         <form action="enviar.php" method="post">
             <h3>Formulario de contacto</h3>
             <input type="text" name="nombre" placeholder="Tu nombre" required>
             <input type="email" name="correo" placeholder="Tu correo electrónico" required>
             <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-            <button type="submit">Enviar mensaje</button>
+            <button type="submit"" >Enviar mensaje</button>
         </form>
     </section>
 

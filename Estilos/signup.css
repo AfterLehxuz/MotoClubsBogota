@@ -29,6 +29,8 @@ header {
 .logo img {
     height: 40px;
     padding-right: 5px;
+    border-radius: 10%; /* Esto hace que la imagen sea redonda */
+
 }
 
 nav {
@@ -80,6 +82,7 @@ button {
     border: 1px solid #ffff;
     color: #ffff;
     font-weight: 600;
+    border-radius:10px;
 }
 
 button:hover {

@@ -44,12 +44,14 @@ $stmt->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Estilos/ventas.css">
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <title>Ventas</title>
+  
 </head>
 
 <body>
     <aside>
-        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
+        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Clubs Bogota</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>

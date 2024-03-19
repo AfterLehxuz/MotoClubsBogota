@@ -14,13 +14,20 @@ session_start();
     <script src="javaScript/reservas.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Estilos/reservas.css">
-    <title>Reservas</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Hacer_Reserva</title>
+    <style>
+    .logo img {
+        border-radius: 10%; /* Esto hace que la imagen sea redonda */
+    }
+</style>
+    
 </head>
 
 <body>
     <header>
         <a href="index.php" class="logo">
-            <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Club
+            <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota
         </a>
         <nav>
             <ul>

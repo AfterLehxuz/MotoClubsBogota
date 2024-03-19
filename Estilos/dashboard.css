@@ -89,6 +89,7 @@
     font-size: 16px; 
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
   }
   
   .contenido-perfil {
@@ -119,9 +120,9 @@
     display: flex;
     align-items: center;
     background-color: aquamarine;
-    padding: 5px 10px;
+    padding: 1px 10px 1px 10px ;
     border-radius: 5px;
-  }
+}
   
   .perfil {
     position: relative;
@@ -279,4 +280,9 @@ progress {
 
 progress::-webkit-progress-value {
   background-color: #007bff; /* Color de la barra de progreso */
+}
+
+.log img {
+  border-radius: 10%;
+  margin-bottom: 5px; /* Ajusta este margen según tu preferencia */
 }

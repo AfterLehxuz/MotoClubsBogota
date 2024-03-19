@@ -14,6 +14,11 @@ session_start();
     <link rel="stylesheet" href="Estilos/landing.css">
     <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <title>Moto Clud Bogota</title>
+    <style>
+    .logo img {
+        border-radius: 10%; /* Esto hace que la imagen sea redonda */
+    }
+</style>
 </head>
 
 <body>

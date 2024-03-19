@@ -79,8 +79,7 @@ aside ul li {
 
 aside ul li:hover {
     background-color: red;
-  transition: 1s;    
-  border-radius: 5%;
+    border-radius: 5%;
 }
 
 aside ul li a {
@@ -109,6 +108,7 @@ aside ul li a {
     font-size: 16px; 
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
   }
   
 .contenido-perfil {
@@ -138,7 +138,7 @@ aside ul li a {
     display: flex;
     align-items: center;
     background-color: aquamarine;
-    padding: 5px 10px;
+    padding: 1px 10px 1px 10px ;
     border-radius: 5px;
 }
 
@@ -291,3 +291,8 @@ button {
 .editar-producto i {
     margin-right: 5px; 
 }
+
+.log img {
+    border-radius: 10%;
+    margin-bottom: 5px; /* Ajusta este margen según tu preferencia */
+  }

@@ -159,9 +159,9 @@
     display: flex;
     align-items: center;
     background-color: aquamarine;
-    padding: 5px 10px;
+    padding: 1px 10px 1px 10px ;
     border-radius: 5px;
-  }
+}
   
   .perfil {
     position: relative;

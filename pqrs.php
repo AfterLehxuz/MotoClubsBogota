@@ -13,6 +13,11 @@
     <script src="javaScript/pqrs_ajax.js"></script>
     <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <title>PQRS</title>
+    <style>
+    .logo img {
+        border-radius: 10%; /* Esto hace que la imagen sea redonda */
+    }
+</style>
 </head>
 
 <body>

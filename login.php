@@ -21,6 +21,11 @@ if (isset($_SESSION["rol"])) {
     <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <script src="javaScript/login_ajax.js"></script>
     <title>Iniciar Sesión</title>
+    <style>
+    .logo img {
+        border-radius: 10%; /* Esto hace que la imagen sea redonda */
+    }
+</style>
 </head>
 
 <body>

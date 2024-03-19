@@ -109,6 +109,7 @@ aside ul li a {
     font-size: 16px; 
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
   }
   
 
@@ -139,10 +140,9 @@ aside ul li a {
     display: flex;
     align-items: center;
     background-color: aquamarine;
-    padding: 5px 10px;
+    padding: 1px 10px 1px 10px ;
     border-radius: 5px;
 }
-
 .perfil {
     position: relative;
     margin: 40px 20px;
@@ -276,3 +276,7 @@ button {
     overflow: hidden;
     padding: 10px;
 }
+.log img {
+    border-radius: 10%;
+    margin-bottom: 5px; /* Ajusta este margen según tu preferencia */
+  }

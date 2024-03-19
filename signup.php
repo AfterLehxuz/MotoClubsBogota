@@ -22,6 +22,11 @@ if (isset($_SESSION["rol"])) {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <title>Registrate</title>
+    <style>
+    .logo img {
+        border-radius: 10%; /* Esto hace que la imagen sea redonda */
+    }
+</style>
 </head>
 
 <body>

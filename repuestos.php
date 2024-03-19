@@ -13,6 +13,11 @@
     <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <script src="javaScript/repuestos_ajax.js"></script>
     <title>Repuestos</title>
+    <style>
+    .logo img {
+        border-radius: 10%; /* Esto hace que la imagen sea redonda */
+    }
+</style>
 </head>
 
 <body>

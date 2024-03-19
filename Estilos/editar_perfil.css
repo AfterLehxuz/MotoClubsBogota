@@ -1,188 +1,188 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  a {
-    text-decoration: none !important;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    min-height: 100vh;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  aside .log {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    text-transform: uppercase;
-    color: white;
-    gap: 10px;
-  }
-  
-  .log > img {
-    height: 40px;
-  }
-  
-  aside ul > li {
-    padding: 20px;
-  }
-  
-  aside ul li a > span {
-    margin: 10px;
-    color: white;
-  }
-  
-  aside ul li {
-    text-transform: uppercase;
-  }
-  
-  aside ul li:hover {
-    background-color: red;
-  transition: 1s;    
-  border-radius: 5%;
-  }
-  
-  aside ul li a {
-    color: #ffffff !important
-  }
-  
-  .contenido {
-    margin-left: 200px;
-  }
-  
-  .contenido header {
-    height: 50px;
-    width: 100%;
-    background-color: gray;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-  }
-  
-  .contenido-rol {
-    background-color: #f0f0f0; 
-    padding: 10px; 
-    border-radius: 5px;
-    text-align: center; 
-    font-size: 16px; 
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-   
-  
-  .contenido-perfil {
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .contenido-perfil > img {
-    border-radius: 12px;
-  }
-  
-  .contenido-perfil span {
-    padding: 0 10px;
-    font-size: 25px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .contenido-perfil span:hover {
-    color: red;
-  }
-  
-  .foto {
-    display: flex;
-    align-items: center;
-    background-color: aquamarine;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .perfil {
-    position: relative;
-    margin: 40px 20px;
-    border: 2px solid black;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
-  }
-  
-  button {
-    height: 40px;
-    margin-right: 10px;
-    margin-left: 10px;
-    background-color: transparent;
-    text-transform: uppercase;
-    padding: 4px;
-    border: 1px solid #ffff;
-    color: #ffff;
-    font-weight: 600;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+li {
+  list-style: none;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside .log {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-transform: uppercase;
+  color: white;
+  gap: 10px;
+}
+
+.log > img {
+  height: 40px;
+}
+
+aside ul > li {
+  padding: 20px;
+}
+
+aside ul li a > span {
+  margin: 10px;
+  color: white;
+}
+
+aside ul li {
+  text-transform: uppercase;
+}
+
+aside ul li:hover {
+  background-color: red;
+transition: 1s;    
+border-radius: 5%;
+}
+
+aside ul li a {
+  color: #ffffff !important
+}
+
+.contenido {
+  margin-left: 200px;
+}
+
+.contenido header {
+  height: 50px;
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.contenido-rol {
+  background-color: #f0f0f0; 
+  padding: 10px; 
+  border-radius: 5px;
+  text-align: center; 
+  font-size: 16px; 
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ 
+
+.contenido-perfil {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contenido-perfil > img {
+  border-radius: 12px;
+}
+
+.contenido-perfil span {
+  padding: 0 10px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+.contenido-perfil span:hover {
+  color: red;
+}
+
+.foto {
+  display: flex;
+  align-items: center;
+  background-color: aquamarine;
+  padding: 1px 10px 1px 10px ;
+  border-radius: 5px;
+}
+
+.perfil {
+  position: relative;
+  margin: 40px 20px;
+  border: 2px solid black;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+button {
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 4px;
+  border: 1px solid #ffff;
+  color: #ffff;
+  font-weight: 600;
+}
 
 .Perfil-informacion {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  button[type="submit"] {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    padding: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
