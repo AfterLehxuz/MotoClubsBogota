@@ -46,7 +46,9 @@ $stmt->close();
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="javaScript/agregar_producto.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Agregar_Inventario</title>
+   
 </head>
 
 <body>
@@ -80,9 +82,9 @@ $stmt->close();
             </div>
             <div class="contenido-perfil">
                 <?php
-                if (isset ($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
+                if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
                     echo '<div class="foto">';
-                    echo '<span class="nombre-usuario">' . $_SESSION["nombre"] . '</span>';
+                    echo '<a href="perfil.php"><span class="nombre-usuario">' . $_SESSION["nombre"] . '</span></a>';
                     echo '</div>';
                     echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
                 }

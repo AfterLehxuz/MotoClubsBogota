@@ -21,7 +21,7 @@ if (isset($_SESSION["rol"])) {
     <link rel="stylesheet" href="Estilos/swal.fire.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
-    <title>Registrate</title>
+    <title>Regístrate</title>
     <style>
     .logo img {
         border-radius: 10%; /* Esto hace que la imagen sea redonda */
@@ -31,7 +31,7 @@ if (isset($_SESSION["rol"])) {
 
 <body>
     <header>
-        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota</a>
+        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">MOTO ClUBS BOGOTÁ</a>
         <nav>
             <ul>
                 <li id="inicio"><a href="index.php">Inicio</a></li>
@@ -45,7 +45,7 @@ if (isset($_SESSION["rol"])) {
     </header>
     <div class="iniciar-secion">
         <div class="iniciar-secion_inicio">
-            <h1>Registrate</h1>
+            <h1>Regístrate</h1>
             <form id="registroForm">
                 <div class="input">
                     <span><i class='bx bx-id-card'></i></span>

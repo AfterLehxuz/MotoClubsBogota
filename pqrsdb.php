@@ -73,13 +73,16 @@ $stmt->close();
                 </span>
             </div>
             <div class="contenido-perfil">
-                <?php
-                echo '<div class="foto">';
-                echo '<span class="nombre-usuario">' . $_SESSION["nombre"] . '</span>';
-                echo '</div>';
-                echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
-                ?>
-            </div>
+    <?php
+    echo '<div class="foto">';
+    echo '<a href="perfil.php">';
+    echo '<span class="nombre-usuario">' . $_SESSION["nombre"] . '</span>';
+    echo '</a>';
+    echo '</div>';
+    echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
+    ?>
+</div>
+
         </header>
         <div class="perfil">
             <div class="reservas-inicio">

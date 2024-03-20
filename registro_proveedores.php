@@ -43,12 +43,14 @@ $stmt->close();
     <script src="javaScript/registrar_proveedores.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="Estilos/pqrsdb.css">
-    <title>Editar Usuario</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Registrar_Proveedor</title>
+    
 </head>
 
 <body>
     <aside>
-        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
+        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">MOTO ClUB'S BOGOTÁ</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
@@ -64,7 +66,7 @@ $stmt->close();
                 <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
             <?php endif; ?>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
+                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Proveedores</a></li>
             <?php endif; ?>
         </ul>
     </aside>
@@ -76,20 +78,17 @@ $stmt->close();
                 </span>
             </div>
             <div class="contenido-perfil">
-                <?php if (isset ($_SESSION["nombre"]) && !empty ($_SESSION["nombre"])): ?>
-                    <div class="foto">
-                        <span class="nombre-usuario">
-                            <?php echo $_SESSION["nombre"]; ?>
-                        </span>
-                    </div>
-                    <a href="logout.php"><button>Cerrar sesión</button></a>
-                <?php endif; ?>
-            </div>
+            <?php if (isset($_SESSION["nombre"]) && !empty($_SESSION["nombre"])): ?>
+    <div class="foto">
+        <a href="perfil.php"><span class="nombre-usuario"><?php echo $_SESSION["nombre"]; ?></span></a>
+    </div>
+    <a href="logout.php"><button>Cerrar sesión</button></a>
+<?php endif; ?> 
         </header>
 
         <div class="perfil">
             <div class="reservas-inicio">
-                <h1>Registrar provedor</h1>
+                <h1>Registrar proveedor</h1>
                 <form id="guardarPerfilForm" method="POST">
                     <input type="hidden" name="idUsuario">
                     <div class="form-group">

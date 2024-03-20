@@ -44,7 +44,9 @@ $stmt->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Estilos/ventas.css">
-    <title>Ventas</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Proveedores</title>
+    
 </head>
 
 <body>
@@ -65,7 +67,7 @@ $stmt->close();
                 <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
             <?php endif; ?>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
+                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Proveedores</a></li>
             <?php endif; ?>
         </ul>
     </aside>
@@ -77,25 +79,26 @@ $stmt->close();
                 </span>
             </div>
             <div class="contenido-perfil">
-                <?php
-                if (isset ($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
-                    echo '<div class="foto">';
-                    echo '<span class="nombre-usuario">' . $_SESSION["nombre"] . '</span>';
-                    echo '</div>';
-                    echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
-                }
-                ?>
+            <?php
+if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
+    echo '<div class="foto">';
+    echo '<a href="perfil.php"><span class="nombre-usuario">' . $_SESSION["nombre"] . '</span></a>';
+    echo '</div>';
+    echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
+}
+?>
+    
             </div>
         </header>
         <div class="perfil">
             <div class="reservas-inicio">
-                <h1>Provedores</h1>
+                <h1>Proveedores</h1>
                 <div class="card">
                     <div class="card-body">
                     <a href="registro_proveedores.php"><button
-                                    id="registrar">Registrar provedor</button></a> 
+                                    id="registrar">Registrar proveedor</button></a> 
                         <div class="search-item">
-                            <label for="buscarProvedor">Buscar Provedor</label>
+                            <label for="buscarProvedor">Buscar Proveedor</label>
                             <input id="buscarProvedor" type="text" name="buscarProvedor"
                                 placeholder="Código o nombre del producto" autocomplete="off">
                             <span class="text-danger" id="error_producto"></span>
@@ -117,13 +120,13 @@ $stmt->close();
                         </div>
                     </div>
                 </div>
-                <h1>Lista de provedores</h1>
+                <h1>Lista de proveedores</h1>
                 <div class="card">
                     <div class="card-body">
                         <table class="table table-striped table-bordered" id="t_ventas_hist" style="width: 100%;">
                             <thead class="table-dark">
                                 <tr>
-                                    <th class="scope=" col">Codio Provedor</th>
+                                    <th class="scope=" col">Codio Proveedor</th>
                                     <th class="scope=" col">Nombre</th>
                                     <th class="scope=" col">Telefono</th>
                                     <th class="scope=" col">Dirrección</th>

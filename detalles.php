@@ -37,7 +37,9 @@ $stmt->close();
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="Estilos/reservadb.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Detalles_Reserva</title>
+    
 </head>
 
 <body>
@@ -73,9 +75,11 @@ $stmt->close();
             <div class="contenido-perfil">
                 <?php if (isset($_SESSION["nombre"]) && !empty($_SESSION["nombre"])): ?>
                     <div class="foto">
-                        <span class="nombre-usuario">
-                            <?php echo $_SESSION["nombre"]; ?>
-                        </span>
+                    <span class="nombre-usuario">
+    <a href="perfil.php" style="color: white;" onmouseover="this.style.color='#222222'" onmouseout="this.style.color='white'">
+        <?php echo $_SESSION["nombre"]; ?>
+    </a>
+</span>
                     </div>
                     <a href="logout.php"><button>Cerrar sesión</button></a>
                 <?php endif; ?>

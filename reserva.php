@@ -34,7 +34,7 @@ session_start();
 <body>
     <header>
     <a href="index.php" class="logo"> 
-        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota
+        <img src="Imagenes/Logo.png" alt="Icono de la empresa">MOTO ClUB'S BOGOTÁ
     </a>
         <nav>
             <ul>

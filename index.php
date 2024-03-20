@@ -13,7 +13,7 @@ session_start();
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Estilos/landing.css">
     <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
-    <title>Moto Clud Bogota</title>
+    <title>Moto Clud's Bogotá</title>
     <style>
     .logo img {
         border-radius: 10%; /* Esto hace que la imagen sea redonda */
@@ -24,7 +24,7 @@ session_start();
 <body>
     <header>
     <a href="index.php" class="logo"> 
-        <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota
+        <img src="Imagenes/Logo.png" alt="Icono de la empresa">MOTO ClUB'S BOGOTÁ
     </a>
         <nav>
             <ul>

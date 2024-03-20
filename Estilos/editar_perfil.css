@@ -115,9 +115,9 @@ aside ul li a {
 .foto {
   display: flex;
   align-items: center;
-  background-color: aquamarine;
-  padding:px 10px px 10px;
+  background-color:#01baff;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .perfil {

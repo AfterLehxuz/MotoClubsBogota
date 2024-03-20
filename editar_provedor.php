@@ -71,7 +71,9 @@ $conn->close();
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="javaScript/editar_provedor.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Editar_Proveedor</title>
+    
 </head>
 
 <body>
@@ -105,13 +107,14 @@ $conn->close();
             </div>
             <div class="contenido-perfil">
                 <?php
-                if (isset ($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
+                if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
                     echo '<div class="foto">';
-                    echo '<span class="nombre-usuario">' . $_SESSION["nombre"] . '</span>';
+                    echo '<a href="perfil.php"><span class="nombre-usuario">' . $_SESSION["nombre"] . '</span></a>';
                     echo '</div>';
                     echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
                 }
                 ?>
+                
             </div>
         </header>
         <div class="perfil">
@@ -119,7 +122,7 @@ $conn->close();
                 <div class="container mt-5">
                     <h1>Editar Proveedor</h1>
                     <form id="editarProveedorForm" method="POST">
-                        <input type="" id="idProveedor" name="idProveedor" value="<?php echo $idProveedor; ?>">
+                        <input hidden id="idProveedor" name="idProveedor" value="<?php echo $idProveedor; ?>">
                         <div class="form-group">
                             <label for="codigoProveedor">Código de Proveedor:</label>
                             <input type="text" id="codigoProveedor" name="codigoProveedor" class="form-control"

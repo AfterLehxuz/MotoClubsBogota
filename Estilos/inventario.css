@@ -131,9 +131,9 @@ aside ul li a {
 .foto {
     display: flex;
     align-items: center;
-    background-color: aquamarine;
-    padding: 1px 10px 1px 10px ;
+    background-color:#01baff;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .perfil {

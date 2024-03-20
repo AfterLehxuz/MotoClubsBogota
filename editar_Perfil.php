@@ -76,9 +76,11 @@ $stmt->close();
       <div class="contenido-perfil">
         <?php if (isset ($_SESSION["nombre"]) && !empty ($_SESSION["nombre"])): ?>
           <div class="foto">
-            <span class="nombre-usuario">
-              <?php echo $_SESSION["nombre"]; ?>
-            </span>
+          <span class="nombre-usuario">
+    <a href="perfil.php" style="color: white;" onmouseover="this.style.color='#222222'" onmouseout="this.style.color='white'">
+        <?php echo $_SESSION["nombre"]; ?>
+    </a>
+</span>
           </div>
           <a href="logout.php"><button>Cerrar sesión</button></a>
         <?php endif; ?>

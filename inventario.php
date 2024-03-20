@@ -44,7 +44,9 @@ $stmt->close();
     <script src="javaScript/inventario_ajax.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="Estilos/inven.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
+    <title>Inventario</title>
+    
 </head>
 
 <body>
@@ -78,9 +80,9 @@ $stmt->close();
             </div>
             <div class="contenido-perfil">
                 <?php
-                if (isset ($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
+                if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
                     echo '<div class="foto">';
-                    echo '<span class="nombre-usuario">' . $_SESSION["nombre"] . '</span>';
+                    echo '<a href="perfil.php"><span class="nombre-usuario">' . $_SESSION["nombre"] . '</span></a>';
                     echo '</div>';
                     echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
                 }

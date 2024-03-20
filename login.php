@@ -30,7 +30,7 @@ if (isset($_SESSION["rol"])) {
 
 <body>
     <header>
-        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">Moto Clubs Bogota</a>
+        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">MOTO ClUBS BOGOTÁ</a>
         <nav>
             <ul>
                 <li id="inicio"><a href="index.php">Inicio</a></li>

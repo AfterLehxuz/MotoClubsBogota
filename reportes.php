@@ -74,15 +74,14 @@ $stmt->close();
                 </span>
             </div>
             <div class="contenido-perfil">
-                <?php if (isset ($_SESSION["nombre"]) && !empty ($_SESSION["nombre"])): ?>
-                    <div class="foto">
-                        <span class="nombre-usuario">
-                            <?php echo $_SESSION["nombre"]; ?>
-                        </span>
-                    </div>
-                    <a href="logout.php"><button>Cerrar sesión</button></a>
-                <?php endif; ?>
-            </div>
+    <?php if (isset($_SESSION["nombre"]) && !empty($_SESSION["nombre"])): ?>
+        <div class="foto">
+            <a href="perfil.php"><span class="nombre-usuario"><?php echo $_SESSION["nombre"]; ?></span></a>
+        </div>
+        <a href="logout.php"><button>Cerrar sesión</button></a>
+    <?php endif; ?>
+</div>
+
         </header>
 
         <div class="perfil">
