@@ -3,19 +3,19 @@ session_start();
 require "conexion.php";
 
 // Verificar la sesión
-if (!isset($_SESSION["nombre"]) || empty($_SESSION["nombre"])) {
+if (!isset ($_SESSION["nombre"]) || empty ($_SESSION["nombre"])) {
     header("Location: login.php");
     exit;
 }
 
-if (!isset($_SESSION["rol_idRol"]) || ($_SESSION["rol_idRol"] != 1 && $_SESSION["rol_idRol"] != 2)) {
+if (!isset ($_SESSION["rol_idRol"]) || ($_SESSION["rol_idRol"] != 1 && $_SESSION["rol_idRol"] != 2)) {
     header("Location: acceso_denegado.php");
     exit;
 }
 $sql = "SELECT u.*, r.nombre as nombre_rol 
         FROM usuarios u 
         INNER JOIN rol r ON u.rol_idRol = r.idRol
-        WHERE u.idUsuarios = ?"; 
+        WHERE u.idUsuarios = ?";
 
 $stmt = $conn->prepare($sql);
 
@@ -39,19 +39,17 @@ $stmt->close();
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="javaScript/inventario_ajax.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="Estilos/inven.css">
-    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
-    <title>Inventario</title>
+    <title>Document</title>
 </head>
 
 <body>
     <aside>
-    <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Clubs Bogota</a>
+        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
@@ -66,18 +64,21 @@ $stmt->close();
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
                 <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
             <?php endif; ?>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
+                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
+            <?php endif; ?>
         </ul>
     </aside>
     <div class="contenido">
         <header>
-        <div class="contenido-rol">
-        <span>
-          <?php echo $usuario['nombre_rol']; ?>
-        </span>
-      </div>
+            <div class="contenido-rol">
+                <span>
+                    <?php echo $usuario['nombre_rol']; ?>
+                </span>
+            </div>
             <div class="contenido-perfil">
                 <?php
-                if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
+                if (isset ($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
                     echo '<div class="foto">';
                     echo '<span class="nombre-usuario">' . $_SESSION["nombre"] . '</span>';
                     echo '</div>';
@@ -107,6 +108,7 @@ $stmt->close();
                             <th>Costo</th>
                             <th>Descripción</th>
                             <th>Nombre</th>
+                            <th>Provedor</th>
                             <th>Cantidad</th>
                             <th>Imagen</th>
                             <th>Acciones</th>

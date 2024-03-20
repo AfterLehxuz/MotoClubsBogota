@@ -91,3 +91,86 @@ button:hover {
     transition: 1s;
 }
 
+
+
+.iniciar-secion {
+    height: 400px;
+    width: 450px;
+    background-color: transparent;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.iniciar-secion h1 {
+    margin: 40px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.iniciar-secion_inicio{
+    padding: 40px;
+    width: 100%;
+}
+
+.input{
+    width: 100%;
+    background-color: yellowgreen;
+    height: 30px;
+    margin: 10px 0;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+}
+
+.input input{
+    height: 100%;
+    width: 100%;
+    padding-left: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+}
+
+.input span{
+    position: absolute;
+    font-size: 25px;
+}
+
+.input:hover{
+    border-bottom: 2px solid red;
+    transition: 1s;
+}
+
+.recordar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.iniciar-secion_inicio button{
+    margin-bottom: 20px;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 4px;
+    border: 1px solid black;
+    color: black;
+    font-weight: 600;
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.iniciar-secion_inicio button:hover{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}

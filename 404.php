@@ -26,10 +26,10 @@
                             <i class="bi bi-exclamation-circle-fill text-danger display-4"></i>
                             <span class="display-1 fw-bold bsb-flip-h">4</span>
                         </h2>
-                        <h3 class="h2 mb-2">Oops! You're lost.</h3>
-                        <p class="mb-5">The page you are looking for was not found.</p>
+                        <h3 class="h2 mb-2">Oops! Estas perdido.</h3>
+                        <p class="mb-5">La pagina que estas buscando no fue encontrada.</p>
                         <a class="btn bsb-btn-5xl btn-dark rounded-pill px-5 fs-6 m-0" href="index.php" role="button">Back to
-                            Home</a>
+                            Volver</a>
                     </div>
                 </div>
             </div>

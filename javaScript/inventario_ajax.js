@@ -19,6 +19,7 @@ $(document).ready(function () {
                                 nombre: item.nombre,
                                 codigo_producto: item.codigo_producto,
                                 costo: item.costo,
+                                provedor: item.nombreProveedor,
                                 descripcion: item.descripcion,
                                 cantidad: item.cantidad,
                                 rutaImagen: item.rutaImagen
@@ -52,6 +53,7 @@ $(document).ready(function () {
             "<td>" + producto.costo + "</td>" +
             "<td>" + producto.descripcion + "</td>" +
             "<td>" + producto.nombre + "</td>" +
+            "<td>" + producto.provedor+ "</td>" +
             "<td><input type='number' id='inputCantidad' value='1' min='1'></td>" +
             "<td><img src='" + producto.rutaImagen + "' alt='Imagen' style='width:50px;height:50px;'></td>" +
             "<td>" +
@@ -130,9 +132,6 @@ $(document).ready(function () {
             });
         });
     }
-
-
-
     function cargarTodosLosProductos() {
         $.ajax({
             type: "POST",
@@ -148,7 +147,7 @@ $(document).ready(function () {
                         "<td>" + producto.descripcion + "</td>" +
                         "<td>" + producto.nombre + "</td>" +
                         "<td>" + producto.cantidad + "</td>" +
-                        "<td>" + producto.proveedor_idProveedor + "</td>" +
+                        "<td>" + producto.proveedor_nombre + "</td>" +
                         "<td><img src='" + producto.rutaImagen + "' alt='Imagen' style='width:50px;height:50px;'></td>" +
                         "<td>" + producto.eliminarBoton + producto.editarBoton + "</td>" +
                         "</tr>"

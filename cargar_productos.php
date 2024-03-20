@@ -7,7 +7,10 @@ $productos = array();
 
 if (isset($_SESSION["rol_idRol"])) {
     $rol_idRol = $_SESSION["rol_idRol"];
-    $sql = "SELECT idProducto, codigo_producto, costo, descripcion, nombre, cantidad, proveedor_idProveedor, rutaImagen FROM producto";
+    $sql = "SELECT p.idProducto, p.codigo_producto, p.costo, p.descripcion, p.nombre, p.cantidad, pr.Nombre AS nombreProveedor, p.rutaImagen 
+            FROM producto p 
+            INNER JOIN proveedores pr ON p.proveedor_idProveedor = pr.Nip";
+    
     $result = $conn->query($sql);
 
     if ($result) {
@@ -21,10 +24,10 @@ if (isset($_SESSION["rol_idRol"])) {
                     "descripcion" => $row["descripcion"],
                     "nombre" => $row["nombre"],
                     "cantidad" => $row["cantidad"],
-                    "proveedor_idProveedor" => $row["proveedor_idProveedor"],
+                    "proveedor_nombre" => $row["nombreProveedor"], 
                     "rutaImagen" => $row["rutaImagen"],
                     "eliminarBoton" => $eliminarBoton,
-                    "editarBoton" => $editarBoton = '<button class="btn btn-info" data-id="' . $row["idProducto"] . '" id="editar-producto"><i class="bx bx-edit"></i> </button>',
+                    "editarBoton" => '<button class="btn btn-info" data-id="' . $row["idProducto"] . '" id="editar-producto"><i class="bx bx-edit"></i> </button>',
                     "rol_idRol" => $rol_idRol
                 );
             }
@@ -42,4 +45,3 @@ header('Content-Type: application/json');
 echo json_encode($productos);
 
 $conn->close();
-

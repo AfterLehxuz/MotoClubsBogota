@@ -39,18 +39,14 @@ $stmt->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Estilos/dashboard.css">
-    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">  
+    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
     <title>Ventas</title>
-    
+
 </head>
 
 <body>
     <aside>
-        <a href="index.php" class="log">
-            <img src="Imagenes/Logo.png" alt="logo">
-            <span>Moto Clubs Bogota</span>
-        </a>
-        
+        <a href="index.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
@@ -64,6 +60,9 @@ $stmt->close();
             <li><a href="reportes.php"><span><i class='bx bx-question-mark'></i></span>Reportes</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
                 <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
+            <?php endif; ?>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
+                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
             <?php endif; ?>
         </ul>
     </aside>

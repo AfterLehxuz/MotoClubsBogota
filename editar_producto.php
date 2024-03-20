@@ -1,8 +1,6 @@
 <?php
-
 session_start();
 require_once "conexion.php";
-
 
 if (!isset ($_SESSION["nombre"]) || empty ($_SESSION["nombre"])) {
     header("Location: login.php");
@@ -13,11 +11,23 @@ if (!isset ($_SESSION["rol_idRol"]) || ($_SESSION["rol_idRol"] != 1 && $_SESSION
     header("Location: acceso_denegado.php");
     exit;
 }
+$sql = "SELECT u.*, r.nombre as nombre_rol 
+        FROM usuarios u 
+        INNER JOIN rol r ON u.rol_idRol = r.idRol
+        WHERE u.idUsuarios = ?";
 
+$stmt = $conn->prepare($sql);
+
+$stmt->bind_param("i", $_SESSION["rol"]);
+
+$stmt->execute();
+
+$resultado = $stmt->get_result();
+
+$usuario = $resultado->fetch_assoc();
 
 if (isset ($_GET['id']) && !empty ($_GET['id'])) {
     $idProducto = $_GET['id'];
-
 
     $sql = "SELECT * FROM producto WHERE idProducto = ?";
     $stmt = $conn->prepare($sql);
@@ -28,7 +38,6 @@ if (isset ($_GET['id']) && !empty ($_GET['id'])) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
 
-
         $nombre = $row['nombre'];
         $descripcion = $row['descripcion'];
         $costo = $row['costo'];
@@ -36,33 +45,32 @@ if (isset ($_GET['id']) && !empty ($_GET['id'])) {
         $codigo_producto = $row['codigo_producto'];
         $proveedor_idProveedor = $row['proveedor_idProveedor'];
         $rutaImagen = $row['rutaImagen'];
-    } else {
 
+        $sqlProveedor = "SELECT Nombre FROM proveedores WHERE Nip = ?";
+        $stmtProveedor = $conn->prepare($sqlProveedor);
+        $stmtProveedor->bind_param("i", $proveedor_idProveedor);
+        $stmtProveedor->execute();
+        $resultProveedor = $stmtProveedor->get_result();
+
+        if ($resultProveedor->num_rows > 0) {
+            $rowProveedor = $resultProveedor->fetch_assoc();
+            $proveedorNombre = $rowProveedor['Nombre'];
+        } else {
+            $proveedorNombre = "Proveedor desconocido";
+        }
+    } else {
         header("Location: Inventario.php");
         exit;
     }
-    $sql = "SELECT u.*, r.nombre as nombre_rol 
-    FROM usuarios u 
-    INNER JOIN rol r ON u.rol_idRol = r.idRol
-    WHERE u.idUsuarios = ?";
-
-    $stmt = $conn->prepare($sql);
-
-    $stmt->bind_param("i", $_SESSION["rol"]);
-
-    $stmt->execute();
-
-    $resultado = $stmt->get_result();
-
-    $usuario = $resultado->fetch_assoc();
-
     $stmt->close();
+    $stmtProveedor->close();
     $conn->close();
 } else {
 
     header("Location: Inventario.php");
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -72,28 +80,38 @@ if (isset ($_GET['id']) && !empty ($_GET['id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="Estilos/producto.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="javaScript/editar_producto.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
-    <title>Editar_Producto</title>
+    <title>Document</title>
 </head>
 
 <body>
     <aside>
-    <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Clubs Bogota</a>
+        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
-            <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
+                <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
+            <?php endif; ?>
             <li><a href="reservadb.php"><span><i class='bx bx-check-double'></i></span>Reservas</a></li>
             <li><a href="pqrsdb.php"><span><i class='bx bx-question-mark'></i></span>PQRS</a></li>
-            <li><a href="clientes.php"><span><i class='bx bx-question-mark'></i></span>Clientes</a></li>
+            <?php if ($_SESSION["rol_idRol"] == 1): ?>
+                <li><a href="clientes.php"><span><i class='bx bx-question-mark'></i></span>Clientes</a></li>
+            <?php endif; ?>
             <li><a href="reportes.php"><span><i class='bx bx-question-mark'></i></span>Reportes</a></li>
-            <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
+                <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
+            <?php endif; ?>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
+                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
+            <?php endif; ?>
         </ul>
     </aside>
     <div class="contenido">
@@ -145,13 +163,16 @@ if (isset ($_GET['id']) && !empty ($_GET['id'])) {
                             value="<?php echo $codigo_producto; ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="proveedor">Proveedor:</label>
-                        <select id="proveedor" name="proveedor" class="form-control" required>
-                            <option value="YAMAHA" <?php echo ($proveedor_idProveedor == 'YAMAHA') ? 'selected' : ''; ?>>
-                                YAMAHA</option>
-                            <option value="KTM" <?php echo ($proveedor_idProveedor == 'KTM') ? 'selected' : ''; ?>>KTM
-                            </option>
-                        </select>
+                        <label for="proveedor">Provedor actual:</label>
+                        <input type="text" id="proveedor" name="proveedor" class="form-control"
+                            value="<?php echo $proveedorNombre; ?>" required readonly>
+                        <input type="hidden" id="proveedorId" name="proveedorId"
+                            value="<?php echo $proveedor_idProveedor; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="newProveedor">Nuevo provedor:</label>
+                        <input type="text" id="newProveedor" name="newProveedor" class="form-control">
+                        <input type="hidden" id="newProveedorId" name="newProveedorId">
                     </div>
                     <div class="form-group">
                         <label for="imagen">Imagen actual:</label>

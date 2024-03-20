@@ -37,20 +37,21 @@ $stmt->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="Estilos/producto.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="javaScript/agregar_producto.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="Imagenes/Logo(1).ico">
-    <title>Agregar_Inventario</title>
-    
+    <title>Document</title>
 </head>
+
 <body>
     <aside>
-    <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Clubs Bogota</a>
+        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
@@ -65,18 +66,21 @@ $stmt->close();
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
                 <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
             <?php endif; ?>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
+                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
+            <?php endif; ?>
         </ul>
     </aside>
     <div class="contenido">
         <header>
-        <div class="contenido-rol">
-        <span>
-          <?php echo $usuario['nombre_rol']; ?>
-        </span>
-      </div>
+            <div class="contenido-rol">
+                <span>
+                    <?php echo $usuario['nombre_rol']; ?>
+                </span>
+            </div>
             <div class="contenido-perfil">
                 <?php
-                if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
+                if (isset ($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
                     echo '<div class="foto">';
                     echo '<span class="nombre-usuario">' . $_SESSION["nombre"] . '</span>';
                     echo '</div>';
@@ -111,19 +115,10 @@ $stmt->close();
                     </div>
                     <div class="form-group">
                         <label for="proveedor">Proveedor:</label>
-                        <select id="proveedor" name="proveedor" class="form-control" required>
-                            <option value="YAMAHA">YAMAHA</option>
-                            <option value="KTM">KTM</option>
-                            <option value="HONDA">HONDA</option>
-                            <option value="KAWASAKI">KAWASAKI</option>
-                            <option value="DUCATI">DUCATI</option>
-                            <option value="BAJAJ">BAJAJ</option>
-                            <option value="SUZUKI">SUZUKI</option>
-                            <option value="KYMCO">KYMCO</option>
-                            <option value="HERO">HERO</option>
-                            <option value="TVS">TVS</option>
-                        </select>
+                        <input type="text" id="proveedor" name="proveedor" class="form-control" required>
+                        <input type="hidden" id="proveedorId" name="proveedorId">
                     </div>
+
                     <div class="form-group">
                         <label for="imagen">Imagen:</label>
                         <input type="file" id="imagen" name="imagen" accept="image/*" class="form-control-file"
