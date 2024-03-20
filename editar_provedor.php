@@ -76,7 +76,7 @@ $conn->close();
 
 <body>
 <aside>
-        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">Moto Club</a>
+        <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">MOTO ClUB'S BOGOTÁ</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
@@ -146,7 +146,7 @@ $conn->close();
                                 value="<?php echo $direccion; ?>" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-                        <a href="proveedores.php" class="btn btn-secondary">Cancelar</a>
+                        <a href="provedores.php" class="btn btn-secondary">Cancelar</a>
                     </form>
                 </div>
             </div>
