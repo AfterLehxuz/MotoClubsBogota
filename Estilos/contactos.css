@@ -126,19 +126,34 @@ button:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 0px; /* Reducir el margen inferior entre la barra y el contenido */
+  background-color: black; /* Color de fondo negro con transparencia */
+  color: white; /* Texto blanco */
+  position: fixed; /* Fijar la posición */
+  bottom: -1%; /* Ajustar el posicionamiento inferior */
+  top: unset; /* Quitar el posicionamiento superior */
+  width: 100%; /* Ocupar el ancho completo */
+  padding: 10px 1px 1px 1px; /* Espaciado interno (10px arriba y abajo, 0 a los lados) */
+  border-top: 1px solid rgba(255, 255, 255, 0.5); /* Ajustar el grosor y el color de la línea inferior */
+  height: 80px;
 }
+
 
 .info-contacto .item {
-  padding: 20px;
-  text-align: center;
+  display: flex; /* Establece el contenedor como un flexbox */
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  padding: 0px;
   width: 30%;
+  margin-bottom: 10px; /* Ajusta el margen inferior para separar los elementos */
 }
 
+
 .info-contacto .item i {
-  font-size: 20px;
+  font-size: 20px; /* Tamaño de fuente más pequeño para los iconos */
+  color: black; /* Cambiar el color a negro */
   margin-bottom: 10px;
-  color: #000;
 }
 
 .info-contacto .item p {
@@ -151,7 +166,7 @@ button:hover {
 }
 
 .swiper-container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -161,12 +176,17 @@ button:hover {
   height: auto;
   margin: auto;
 }
+
 button#cerrar-sesion,
 button#perfil {
-    font-family: Arial, sans-serif; /* Cambio de la fuente de los botones "Cerrar sesión" y "Perfil" a Arial */
+  font-family: Arial, sans-serif; /* Cambio de la fuente de los botones "Cerrar sesión" y "Perfil" a Arial */
 }
 
 button#iniciar-sesion,
 button#registrarse {
-    font-family: Arial, sans-serif; /* Cambio de la fuente de los botones "Iniciar sesión" y "Registrarse" a Arial */
+  font-family: Arial, sans-serif; /* Cambio de la fuente de los botones "Iniciar sesión" y "Registrarse" a Arial */
+}
+
+a {
+  color: white;
 }
