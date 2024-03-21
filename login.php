@@ -16,13 +16,13 @@
         .logo img {
             border-radius: 10%;
             /* Esto hace que la imagen sea redonda */
-        }
+        }      
     </style>
 </head>
 
 <body>
     <header>
-        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">MOTO ClUBS
+        <a href="index.php" class="logo"> <img src="Imagenes/Logo.png" alt="Icono de la empresa">MOTO ClUB'S
             BOGOTÁ</a>
         <nav>
             <ul>
