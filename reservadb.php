@@ -63,7 +63,7 @@ $stmt->close();
                 <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
             <?php endif; ?>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
+                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Proveedores</a></li>
             <?php endif; ?>
         </ul>
     </aside>
@@ -119,12 +119,11 @@ $stmt->close();
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody id="t_tod"></tbody>
+                    <tbody id="t_tod">   </tbody>
                 </table>
 
             </div>
         </div>
-
 
     </div>
 </body>

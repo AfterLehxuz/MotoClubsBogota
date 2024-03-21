@@ -74,16 +74,15 @@ $stmt->close();
                 </span>
             </div>
             <div class="contenido-perfil">
-                <?php
-              if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
-                echo '<div class="foto">';
-                echo '<a href="perfil.php"><span class="nombre-usuario">' . $_SESSION["nombre"] . '</span></a>';
-                echo '</div>';
-                echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
-            }
-            ?>
-                ?>
-            </div>
+    <?php
+    if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
+        echo '<div class="foto">';
+        echo '<a href="perfil.php"><span class="nombre-usuario">' . $_SESSION["nombre"] . '</span></a>';
+        echo '</div>';
+        echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
+    }
+    ?>
+</div>
         </header>
         <div class="perfil">
             <div class="reservas-inicio">
