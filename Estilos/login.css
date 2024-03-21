@@ -235,7 +235,6 @@ button:hover {
     bottom: 0; /* Lo coloca al final de la ventana */
     width: 100%; /* Ajusta el ancho al 100% de la ventana */
 }
-
 .info-contacto {
     display: flex;
     justify-content: center;
@@ -248,6 +247,11 @@ button:hover {
 
 .info-contacto i {
     font-size: 20px; /* Reducir el tamaño de los iconos */
+    font-weight: bold; /* Agrega negrita a los íconos */
+}
+
+.info-contacto p {
+    font-weight: bold; /* Agrega negrita al texto */
 }
 
 .iniciar-sesion {
