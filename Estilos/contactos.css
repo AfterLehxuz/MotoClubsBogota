@@ -155,6 +155,7 @@ a {
 }
 
 footer {
+  border-top: 1px solid white; /* Agrega una línea blanca en la parte superior del footer */
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -165,7 +166,7 @@ footer {
   width: 100%; /* Ajusta el ancho al 100% de la ventana */
 }
 
-
+/* Estilos para la información de contacto */
 .info-contacto {
   display: flex;
   justify-content: center;
@@ -176,7 +177,11 @@ footer {
   margin: 0 9%; /* Aumenta el margen entre los elementos */
 }
 
-
 .info-contacto i {
   font-size: 20px; /* Reducir el tamaño de los iconos */
+  font-weight: bold; /* Agrega negrita a los íconos */
+}
+
+.info-contacto p {
+  font-weight: bold; /* Agrega negrita al texto */
 }
