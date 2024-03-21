@@ -239,3 +239,12 @@ footer {
 .info-contacto a:hover {
     color: #ccc; /* Cambia el color al pasar el mouse */
 }
+section {
+    margin-top: 0px; /* Ajusta el margen superior según sea necesario */
+}
+body {
+    margin-top: 10000000;
+}
+footer {
+    margin-top: -0px; /* Puedes ajustar el valor según lo que necesites */
+}
