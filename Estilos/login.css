@@ -113,9 +113,10 @@ button:hover {
     text-transform: uppercase;
 }
 
-.iniciar-secion_inicio{
+.iniciar-secion_inicio {
     padding: 40px;
     width: 100%;
+    text-align: center; /* Centra el contenido */
 }
 
 .input{
@@ -174,3 +175,89 @@ button:hover {
     color: white;
     transition: 1s;
 }
+
+.logo img {
+    border-radius: 10%;
+    /* Esto hace que la imagen sea redonda */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.image-container {
+    margin-right: 20px;
+    /* Espacio entre la imagen y el formulario */
+}
+
+.image-container img {
+    width: 200px; /* Aumenta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.iniciar-sesion {
+    /* Estilos para tu formulario de inicio de sesión */
+    /* Ancho, altura, bordes, etc. */
+    width: 400px; /* Aumenta el ancho del formulario */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .image-container {
+            margin-right: 20px;
+            /* Espacio entre la imagen y el formulario */
+        }
+
+        .image-container img {
+            width: 200px; /* Aumenta el ancho de la imagen */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+
+        .iniciar-sesion {
+            /* Estilos para tu formulario de inicio de sesión */
+            /* Ancho, altura, bordes, etc. */
+            width: 400px; /* Aumenta el ancho del formulario */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para el footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 15px; /* Ajusta el padding */
+            font-size: 14px; /* Ajusta el tamaño del texto */
+            position: fixed; /* Fija el footer en la parte inferior */
+            bottom: 0; /* Lo coloca al final de la ventana */
+            width: 100%; /* Ajusta el ancho al 100% de la ventana */
+          }
+          
+
+        .info-contacto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info-contacto .item {
+            margin: 0 9%; /* Aumenta el margen entre los elementos */
+        }
+        
+
+        .info-contacto i {
+            font-size: 20px; /* Reducir el tamaño de los iconos */
+          }

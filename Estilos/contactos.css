@@ -122,41 +122,6 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.info-contacto {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 30px; /* Reducir el margen inferior entre la barra y el contenido */
-  background-color: black; /* Color de fondo negro con transparencia */
-  color: white; /* Texto blanco */
-  position: fixed; /* Fijar la posición */
-  bottom: -15%; /* Ajustar el posicionamiento inferior */
-  top: unset; /* Quitar el posicionamiento superior */
-  width: 100%; /* Ocupar el ancho completo */
-  padding: 10px 1px 1px 1px; /* Espaciado interno (10px arriba y abajo, 0 a los lados) */
-}
-.info-contacto .item {
-  display: flex; /* Establece el contenedor como un flexbox */
-  flex-direction: column; /* Alinea los elementos verticalmente */
-  justify-content: center; /* Centra los elementos verticalmente */
-  align-items: center; /* Centra los elementos horizontalmente */
-  padding: 20px;
-  width: 30%;
-  margin-bottom: 10px; /* Ajusta el margen inferior para separar los elementos */
-}
-
-
-.info-contacto .item i {
-  font-size: 20px; /* Tamaño de fuente más pequeño para los iconos */
-  color: black; /* Cambiar el color a negro */
-  margin-bottom: 10px;
-}
-
-.info-contacto .item p {
-  font-size: 14px;
-  margin: 0;
-}
-
 #contactos form {
   display: none;
 }
@@ -185,4 +150,31 @@ button#registrarse {
 
 a {
   color: white;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px; /* Ajusta el padding */
+  font-size: 14px; /* Ajusta el tamaño del texto */
+  position: fixed; /* Fija el footer en la parte inferior */
+  bottom: 0; /* Lo coloca al final de la ventana */
+  width: 100%; /* Ajusta el ancho al 100% de la ventana */
+}
+
+
+.info-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-contacto .item {
+  margin: 0 9%; /* Aumenta el margen entre los elementos */
+}
+
+
+.info-contacto i {
+  font-size: 20px; /* Reducir el tamaño de los iconos */
 }

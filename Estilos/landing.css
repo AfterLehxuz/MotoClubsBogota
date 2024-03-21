@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -6,10 +5,8 @@
 }
 
 body{
-  background-color: #efefef;
-  min-height: 100%;
-  
- 
+    background-color: #efefef;
+    min-height: 100%;
 }
 
 header {
@@ -33,10 +30,7 @@ header {
 .logo img {
     height: 40px;
     padding-right: 5px;
-   
 }
-
-
 
 .foto {
     display: flex;
@@ -45,9 +39,7 @@ header {
     padding: 1px 10px 1px 10px ;
     border-radius: 5px;
     font-weight:bold;
-
 }
-
 
 nav {
     display: flex;
@@ -62,8 +54,8 @@ nav ul {
 
 #inicio {
     background-color: red;
-  transition: 1s;    
-  border-radius: 5%;
+    transition: 1s;    
+    border-radius: 5%;
 }
 
 #inicio a {
@@ -73,7 +65,6 @@ nav ul {
 ul li:hover {
     background-color: white;
     transition: 1s;
-
 }
 
 li a:hover {
@@ -102,9 +93,8 @@ button {
     border: 1px solid #ffff;
     color: #ffff;
     font-weight: 600;
-   border-radius: 10px;
+    border-radius: 10px;
 }
-
 
 button:hover {
     background-color: white;
@@ -123,26 +113,24 @@ button:hover {
     background-size: cover;
     background-repeat: no-repeat;
     animation: fondo infinite 20s;
-  }
+}
 
 @keyframes fondo {
     20%{
         background-image: linear-gradient(0deg, rgba(0,0,0,0.4),rgba(0,0,0,.4)),url(imagenes/fondo2.jpg);
-        
     }
     45%{
         background-image: url(imagenes/fondo3.jpg);
     }
-
     65%{
         background-image: url(imagenes/fondo4.jpg);
     }
     85%{
         background-image: linear-gradient(0deg, rgba(0,0,0,0.4),rgba(0,0,0,.4)),url(imagenes/fondo5.jpg);
     }
-
 }
-.Informacion{
+
+.Informacion {
     height: 60%;
     width: 100%;
     background-color: transparent;
@@ -157,13 +145,14 @@ button:hover {
     gap: 40px;
 }
 
-.Informacion button{
+.Informacion button {
     height: 40px;
     width: 250px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
 }
-.informacion-detallada{
+
+.informacion-detallada {
     position: relative;
     display: flex;
     justify-content: center;
@@ -176,7 +165,7 @@ button:hover {
     box-shadow: 5px 5px 5px white;
 }
 
-.informacion-detallada-contenido{
+.informacion-detallada-contenido {
     border-radius: 10px;
     height: 80%;
     width: 300px;
@@ -218,3 +207,35 @@ button:hover {
     text-align: center;
 }
 
+/* Estilos para el footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px; /* Agrega un margen superior */
+}
+
+.info-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-contacto .item {
+    margin: 0 9%;
+}
+
+.info-contacto i {
+    font-size: 24px;
+    color: #fff; /* Color blanco para los iconos */
+}
+
+.info-contacto a {
+    color: #fff;
+    font-weight: bold;   
+}
+
+.info-contacto a:hover {
+    color: #ccc; /* Cambia el color al pasar el mouse */
+}
