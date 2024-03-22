@@ -104,7 +104,7 @@ button:hover {
     height: 500px;
     width: 450px;
     background-color: rgba(248, 248, 255, 0.8); /* Cambia el último valor (0.9) para ajustar la opacidad */
-    margin: 100px auto;
+    margin: 90px auto;
     border: 2px solid black;
     border-radius: 10px;
     display: flex;
@@ -160,20 +160,67 @@ a > button {
 }
 
 
-.iniciar-secion_inicio button{
+.iniciar-secion_inicio button {
     margin-bottom: 20px;
     background-color: transparent;
     text-transform: uppercase;
     border: 1px solid black;
     color: black;
     font-weight: 600;
-    width: 100%;
+    width: 60%; /* Anchura del botón */
     height: 30px;
     border-radius: 6px;
+    cursor: pointer;
+    margin-left: auto; /* Centra el botón horizontalmente */
+    margin-right: auto; /* Centra el botón horizontalmente */
 }
 
-.iniciar-secion_inicio button:hover{
+.iniciar-secion_inicio button:hover {
     background-color: black;
     color: white;
     transition: 1s;
 }
+
+footer {
+    
+    border-top: 1px solid white; 
+    margin-top: -4.25%; 
+    width: 100%; /* Ajusta el ancho al 100% de la ventana */
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px; /* Ajusta el padding */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Agrega negrita a todo el contenido del footer */
+    clear: both; /* Lirita a todo el contenido del footer */
+    font-weight: bold;
+}
+  
+  /* Estilos para la información de contacto */
+  .info-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Agrega negrita a los elementos de la información de contacto */
+  }
+  
+  .info-contacto .item {
+    margin: 0 9%;
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto i {
+    font-size: 20px; /* Tamaño de los iconos */
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto p {
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  
+
+

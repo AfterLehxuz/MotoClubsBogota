@@ -164,6 +164,45 @@ button:hover {
     
 }
 
+footer {
+    
+    border-top: 1px solid white; 
+    margin-top: 19%; 
+    width: 100%; /* Ajusta el ancho al 100% de la ventana */
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px; /* Ajusta el padding */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Agrega negrita a todo el contenido del footer */
+    clear: both; /* Lirita a todo el contenido del footer */
+    font-weight: bold;
+}
+  
+  /* Estilos para la información de contacto */
+  .info-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Agrega negrita a los elementos de la información de contacto */
+  }
+  
+  .info-contacto .item {
+    margin: 0 9%;
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto i {
+    font-size: 20px; /* Tamaño de los iconos */
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto p {
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
 
 
 

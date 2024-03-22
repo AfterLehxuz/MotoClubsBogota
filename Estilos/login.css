@@ -92,6 +92,7 @@ button {
   color: #ffff;
   font-weight: 600;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 button:hover {
@@ -111,7 +112,7 @@ button:hover {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+   
 }
 
 .iniciar-secion h1 {
@@ -160,27 +161,11 @@ button:hover {
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+   
 }
 
-.iniciar-secion_inicio button {
-    margin-bottom: 20px;
-    background-color: transparent;
-    text-transform: uppercase;
-    padding: 20px 40px; /* Ajusta el relleno del botón para que sea más grande */
-    border: 1px solid black;
-    color: black; /* Cambia el color del texto a negro */
-    font-weight: 600;
-    width: 240px; /* Ajusta el ancho del botón */
-    height: 60px; /* Ajusta la altura del botón */
-    border-radius: 20px; /* Redondea los bordes */
-    font-size: 18px; /* Ajusta el tamaño de la fuente */
-    cursor: pointer;
-}
-.iniciar-secion_inicio button:hover {
-    background-color: black;
-    color: white;
-    transition: 1s;
-}
+
+
 .logo img {
     border-radius: 10%;
     /* Esto hace que la imagen sea redonda */
@@ -225,34 +210,46 @@ button:hover {
     
   /* Estilos para el footer */
   footer {
-    border-top: 1px solid white; /* Agrega una línea blanca en la parte superior del footer */
+    
+    border-top: 1px solid white; 
+    margin-top: 18.1%; 
+    width: 100%; /* Ajusta el ancho al 100% de la ventana */
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 15px; /* Ajusta el padding */
     font-size: 14px; /* Ajusta el tamaño del texto */
-    position: fixed; /* Fija el footer en la parte inferior */
-    bottom: 0; /* Lo coloca al final de la ventana */
-    width: 100%; /* Ajusta el ancho al 100% de la ventana */
+    font-weight: bold; /* Agrega negrita a todo el contenido del footer */
+    clear: both; /* Lirita a todo el contenido del footer */
+    font-weight: bold;
 }
-.info-contacto {
+  
+  /* Estilos para la información de contacto */
+  .info-contacto {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.info-contacto .item {
-    margin: 0 9%; /* Aumenta el margen entre los elementos */
-}
-
-.info-contacto i {
-    font-size: 20px; /* Reducir el tamaño de los iconos */
-    font-weight: bold; /* Agrega negrita a los íconos */
-}
-
-.info-contacto p {
-    font-weight: bold; /* Agrega negrita al texto */
-}
+    font-weight: bold; /* Agrega negrita a los elementos de la información de contacto */
+  }
+  
+  .info-contacto .item {
+    margin: 0 9%;
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto i {
+    font-size: 20px; /* Tamaño de los iconos */
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto p {
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  
 
 .iniciar-sesion {
              

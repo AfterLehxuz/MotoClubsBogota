@@ -58,8 +58,8 @@
                             <a href="#"></a>
                         </div>
                         <button type="submit" id="btnLogin" style="background-color: black; color: white;">Iniciar sesión</button>
-                        <div class="registrar">
-                            <p>¿No tienes cuenta? <a href="signup.php">Regístrate</a></p>
+                        <div class="registrar"  style="margin-top: 10px;">
+                        <p>¿No tienes cuenta? <a href="signup.php" style="color: red;">Regístrate</a></p>
                         </div>
                     </form>
                 </div>
