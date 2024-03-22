@@ -6,9 +6,18 @@
 }
 
 body{
-  background-color: #efefef;
+  background-color:black;
   min-height: 100%;
  
+}
+
+body {
+    background-image: url('Imagenes/15-06-2021-riga-latvia-man-riding-motorcycle-in-asphalt-road-motorcyclist-at-black-and-white-sport-motorcycle-isolated-on-white-background-2HBYYTA.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la URL o la ruta de tu imagen */
+    background-size: 100%;
+    background-position: center top 1px; /* Centra la imagen de fondo en la parte superior con un desplazamiento vertical de 100px */
+    background-repeat: no-repeat; /*  Evita la repetición de la imagen */
+    background-position: right 465px top; /* Mueve la imagen de fondo hacia la derecha y la desplaza 10px desde el borde derecho */
+    background-repeat: no-repeat; 
 }
 
 header {
@@ -119,9 +128,10 @@ button:hover {
 .slider-container {
     width: 60%; 
     margin: 40px auto; 
-    color:white;
+    color: white;
     box-shadow: 0 30px 30px rgba(0,0,0, 0.2);
     border-radius: 20px;
+    margin-left: 35%; /* Ajusta el margen izquierdo negativamente para mover el slider hacia la izquierda */
 }
 
 .slider-item {
