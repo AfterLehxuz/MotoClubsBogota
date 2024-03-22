@@ -54,7 +54,7 @@
         </nav>
     </header>
     <section>
-        <h1>Lista de productos</h1>
+        <h1>Catalogo de Lista de productos y repuestos</h1>
         <div id="productos-recientes" class="productos-recientes">
 
         </div>

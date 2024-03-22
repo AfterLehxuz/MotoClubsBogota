@@ -214,15 +214,11 @@ button:hover {
 
 /* Estilos para el footer */
 footer {
-    border-top: 1px solid white; /* Agrega una línea blanca en la parte superior del footer */
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 15px; /* Ajusta el padding */
-    font-size: 14px; /* Ajusta el tamaño del texto */
-    position: fixed; /* Fija el footer en la parte inferior */
-    bottom: 0; /* Lo coloca al final de la ventana */
-    width: 100%; /* Ajusta el ancho al 100% de la ventana */
+    padding: 20px;
+    margin-top: 0px; /* Ajusta el margen superior del footer */
 }
 .info-contacto {
     display: flex;
@@ -236,7 +232,7 @@ footer {
 
 .info-contacto i {
     font-size: 24px;
-    font-weight: bold;  /* Color blanco para los iconos */
+    color: #fff; /* Color blanco para los iconos */
 }
 
 .info-contacto a {
@@ -245,8 +241,7 @@ footer {
 }
 
 .info-contacto a:hover {
-    color: #ccc;
-    font-weight: bold; 
+    color: #ccc; /* Cambia el color al pasar el mouse */
 }
 
 section {
