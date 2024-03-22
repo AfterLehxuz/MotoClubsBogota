@@ -47,18 +47,17 @@
                     <form method="POST">
                         <div class="input">
                             <span><i class='bx bx-envelope'></i></span>
-                            <input type="email" name="email" placeholder="Correo electrónico">
+                            <input type="email" name="email" placeholder="Correo electrónico" style="font-weight: bold; color: black;">
                         </div>
                         <div class="input">
                             <span><i class='bx bx-lock-open-alt'></i></span>
-                            <input type="password" name="password" placeholder="Contraseña">
+                            <input type="password" name="password" placeholder="Contraseña" style="font-weight: bold; color: black;">
                         </div>
                         <div class="recordar">
                             <label for="recuerdame"><input type="checkbox" id="recuerdame"> Recuérdame</label>
-                            <a href="#">¿Olvidaste tu contraseña?</a>
+                            <a href="#"></a>
                         </div>
-                        <button type="submit" id="btnLogin">Iniciar sesión</button>
-
+                        <button type="submit" id="btnLogin" style="background-color: black; color: white;">Iniciar sesión</button>
                         <div class="registrar">
                             <p>¿No tienes cuenta? <a href="signup.php">Regístrate</a></p>
                         </div>

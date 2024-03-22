@@ -49,32 +49,34 @@ if (isset($_SESSION["rol"])) {
             <form id="registroForm">
                 <div class="input">
                     <span><i class='bx bx-id-card'></i></span>
-                    <input type="number" name="documentoID" placeholder="Documento de identificación" min="0">
+                    <input type="number" name="documentoID" placeholder="Documento de identificación "  style="font-weight: bold; color: black;">
                 </div>
                 <div class="input">
                     <span><i class='bx bx-user'></i></span>
-                    <input type="text" name="nombre" placeholder="Nombre completo">
+                    <input type="text" name="nombre" placeholder="Nombre completo" style="font-weight: bold; color: black;">
                 </div>
                 <div class="input">
                     <span><i class='bx bx-phone'></i></span>
-                    <input type="number" name="numero" placeholder="Número">
+                    <input type="number" name="numero" placeholder="Número" style="font-weight: bold; color: black;" >
                 </div>
+
                 <div class="input">
                     <span><i class='bx bx-envelope '></i></span>
-                    <input type="email" name="email" placeholder="Correo electrónico">
+                    <input type="email" name="email" placeholder="Correo electrónico" style="font-weight: bold; color: black;">
                 </div>
                 <div class="input">
                     <span><i class='bx bx-home'></i></span>
-                    <input type="text" name="dirreccion" placeholder="Dirreción">
+                    <input type="text" name="dirreccion" placeholder="Dirreción" style="font-weight: bold; color: black;">
                 </div>
                 <div class="input">
                     <span><i class='bx bx-lock-alt'></i></span>
-                    <input type="password" name="password" placeholder="Contraseña">
+                    <input type="password" name="password" placeholder="Contraseña" style="font-weight: bold; color: black;"    >
                 </div>
 
                 <button type="button" id="btnRegistrar">REGISTRATE</button>
                 <div class="registrar">
-                    <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
+                <p style="color: black;">¿Ya tienes una cuenta? <a href="login.php" style="color: red;">Inicia sesión</a></p>
+
                 </div>
 
             </form>

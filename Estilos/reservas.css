@@ -224,3 +224,43 @@ textarea {
     pointer-events: none;
     background-color: #f9f9f9;
   }
+
+  /* Estilos para el footer */
+footer {
+    border-top: 1px solid white; /* Agrega una línea blanca en la parte superior del footer */
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px; /* Ajusta el padding */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Lo coloca al final de la ventana */
+    width: 100%; /* Ajusta el ancho al 100% de la ventana */
+    font-weight: bold; /* Agrega negrita a todo el contenido del footer */
+  }
+  
+  /* Estilos para la información de contacto */
+  .info-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Agrega negrita a los elementos de la información de contacto */
+  }
+  
+  .info-contacto .item {
+    margin: 0 9%;
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto i {
+    font-size: 20px; /* Tamaño de los iconos */
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto p {
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  

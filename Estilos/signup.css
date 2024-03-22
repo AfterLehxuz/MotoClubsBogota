@@ -8,6 +8,15 @@ body{
   background-color: #efefef;
 }
 
+
+body {
+    background-image: url('Imagenes/man-person-black-and-white-sport-vehicle-motorcycle-927575-pxhere.com2.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la URL o la ruta de tu imagen */
+    background-size:    -10%;
+    background-position: center top 10px; /* Centra la imagen de fondo en la parte superior con un desplazamiento vertical de 100px */
+    background-repeat: no-repeat; /*  Evita la repetición de la imagen */
+    background-position: right  -400px top; /* Mueve la imagen de fondo hacia la derecha y la desplaza 10px desde el borde derecho */
+    background-repeat: no-repeat; 
+}
 header {
     height: 50px;
     width: 100%;
@@ -94,7 +103,7 @@ button:hover {
 .iniciar-secion {
     height: 500px;
     width: 450px;
-    background-color: transparent;
+    background-color: rgba(248, 248, 255, 0.8); /* Cambia el último valor (0.9) para ajustar la opacidad */
     margin: 100px auto;
     border: 2px solid black;
     border-radius: 10px;
@@ -104,7 +113,6 @@ button:hover {
     justify-content: center;
     text-align: center;
 }
-
 .iniciar-secion h1 {
     margin: 40px;
     margin-bottom: 60px;

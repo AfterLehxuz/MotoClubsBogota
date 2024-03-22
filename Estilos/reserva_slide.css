@@ -112,16 +112,9 @@ button:hover {
 }
 
 .general {
-    height: 100vh;
-    width: 100%;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    animation: fondo infinite 20s;
-  }
+    min-height: calc(100vh - 50px); /* Resta la altura del header */
+    position: relative; /* Agrega posición relativa */
+}
 
 .slider-container {
     width: 60%; 
@@ -173,23 +166,25 @@ button:hover {
     font-size: 1.2em;
     color: #fff; 
     background-color: #3498db; 
+    border-radius: 80px;
     border: none; 
-    border-radius: 5px; 
     cursor: pointer;
     transition: background-color 0.3s; 
 }
 
 .slider-item button:hover {
-    background-color: #2980b9;
+    background-color: red;
 }
 
 
 
 .slick-dots {
-    bottom: 10px; 
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
 }
-
-
 .slick-dots li {
     margin: 0 5px;
 }
@@ -219,8 +214,48 @@ button:hover {
 
 .slick-prev:hover::before,
 .slick-next:hover::before {
-  background-color: #2980b9!important; 
+  background-color: red!important; 
 }
 
-
+footer {
+    
+    border-top: 1px solid white; 
+    margin-top: -4.25%; 
+    width: 100%; /* Ajusta el ancho al 100% de la ventana */
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px; /* Ajusta el padding */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Agrega negrita a todo el contenido del footer */
+    clear: both; /* Lirita a todo el contenido del footer */
+    font-weight: bold;
+}
+  
+  /* Estilos para la información de contacto */
+  .info-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Agrega negrita a los elementos de la información de contacto */
+  }
+  
+  .info-contacto .item {
+    margin: 0 9%;
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto i {
+    font-size: 20px; /* Tamaño de los iconos */
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  .info-contacto p {
+    color: #fff; /* Color del texto */
+    font-weight: bold;
+  }
+  
+  
 

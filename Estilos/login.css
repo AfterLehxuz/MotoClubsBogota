@@ -166,21 +166,21 @@ button:hover {
     margin-bottom: 20px;
     background-color: transparent;
     text-transform: uppercase;
-    padding: 10px 20px; /* Ajusta el relleno del botón */
+    padding: 20px 40px; /* Ajusta el relleno del botón para que sea más grande */
     border: 1px solid black;
-    color: black;
+    color: black; /* Cambia el color del texto a negro */
     font-weight: 600;
-    width: 200px; /* Ajusta el ancho del botón */
-    height: 40px; /* Ajusta la altura del botón */
+    width: 240px; /* Ajusta el ancho del botón */
+    height: 60px; /* Ajusta la altura del botón */
     border-radius: 20px; /* Redondea los bordes */
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+    cursor: pointer;
 }
-
 .iniciar-secion_inicio button:hover {
     background-color: black;
     color: white;
     transition: 1s;
 }
-
 .logo img {
     border-radius: 10%;
     /* Esto hace que la imagen sea redonda */
@@ -268,3 +268,4 @@ position: relative; /* Hace que el contenedor sea un punto de referencia para el
 position: absolute; /* Hace que el contenedor de la imagen sea posicionado de manera absoluta dentro del contenedor padre */
 left: 40px; /* Ajusta la distancia desde el borde izquierdo del contenedor padre */
 }
+

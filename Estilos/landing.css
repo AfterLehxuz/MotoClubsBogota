@@ -218,7 +218,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-    margin-top: 0px; /* Ajusta el margen superior del footer */
+    margin-top: 0px;
+    font-weight: bold;
 }
 .info-contacto {
     display: flex;
@@ -228,11 +229,12 @@ footer {
 
 .info-contacto .item {
     margin: 0 9%;
+    font-weight: bold;
 }
 
 .info-contacto i {
     font-size: 24px;
-    color: #fff; /* Color blanco para los iconos */
+    font-weight: bold; /* Color blanco para los iconos */
 }
 
 .info-contacto a {
@@ -241,7 +243,8 @@ footer {
 }
 
 .info-contacto a:hover {
-    color: #ccc; /* Cambia el color al pasar el mouse */
+    color: #fff;
+    font-weight: bold; /* Cambia el color al pasar el mouse */
 }
 
 section {

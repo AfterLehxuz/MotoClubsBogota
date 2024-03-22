@@ -103,6 +103,7 @@ function editarReserva(idReserva) {
 
 
 function venderReserva(idReserva) {
+    
 
 }
 
