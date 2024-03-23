@@ -157,7 +157,7 @@ a {
 /* Estilos para el footer */
 footer {
   border-top: 1px solid white;
-  margin-top: 5%; /* Ajusta el margen superior negativo para bajar más el footer */
+  margin-top: 190px; /* Ajusta el margen superior negativo para bajar más el footer */
   width: 100%; /* Ajusta el ancho al 100% de la ventana */
   background-color: #000;
   color: #fff;

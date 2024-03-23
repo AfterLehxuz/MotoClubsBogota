@@ -14,7 +14,6 @@ body {
     background-size:    -10%;
     background-position: center top 10px; /* Centra la imagen de fondo en la parte superior con un desplazamiento vertical de 100px */
     background-repeat: no-repeat; /*  Evita la repetición de la imagen */
-    background-position: right  -400px top; /* Mueve la imagen de fondo hacia la derecha y la desplaza 10px desde el borde derecho */
     background-repeat: no-repeat; 
 }
 header {
@@ -103,7 +102,7 @@ button:hover {
 .iniciar-secion {
     height: 500px;
     width: 450px;
-    background-color: rgba(248, 248, 255, 0.8); /* Cambia el último valor (0.9) para ajustar la opacidad */
+    background-color: rgba(248, 248, 255, 0.8); 
     margin: 90px auto;
     border: 2px solid black;
     border-radius: 10px;
@@ -180,47 +179,3 @@ a > button {
     color: white;
     transition: 1s;
 }
-
-footer {
-    
-    border-top: 1px solid white; 
-    margin-top: -4.25%; 
-    width: 100%; /* Ajusta el ancho al 100% de la ventana */
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 15px; /* Ajusta el padding */
-    font-size: 14px; /* Ajusta el tamaño del texto */
-    font-weight: bold; /* Agrega negrita a todo el contenido del footer */
-    clear: both; /* Lirita a todo el contenido del footer */
-    font-weight: bold;
-}
-  
-  /* Estilos para la información de contacto */
-  .info-contacto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold; /* Agrega negrita a los elementos de la información de contacto */
-  }
-  
-  .info-contacto .item {
-    margin: 0 9%;
-    color: #fff; /* Color del texto */
-    font-weight: bold;
-  }
-  
-  .info-contacto i {
-    font-size: 20px; /* Tamaño de los iconos */
-    color: #fff; /* Color del texto */
-    font-weight: bold;
-  }
-  
-  .info-contacto p {
-    color: #fff; /* Color del texto */
-    font-weight: bold;
-  }
-  
-  
-
-
