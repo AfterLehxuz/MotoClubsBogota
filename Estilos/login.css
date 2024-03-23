@@ -188,7 +188,7 @@ button:hover {
 .image-container img {
     width: 210px; /* Ancho de la imagen */
     height: auto; /* Altura automática para mantener la proporción */
-    border: 2px solid black; /* Borde sólido negro con un grosor de 2px */
+    /* Borde sólido negro con un grosor de 2px */
     border-radius: 20px; /* Bordes redondeados de 20px */
     position: relative; /* Agrega esta línea para que el posicionamiento relativo funcione */
     top: -10px; /* Ajusta la posición vertical hacia arriba */
@@ -212,7 +212,7 @@ button:hover {
   footer {
     
     border-top: 1px solid white; 
-    margin-top: 18.1%; 
+    margin-top: 20.3%; 
     width: 100%; /* Ajusta el ancho al 100% de la ventana */
     background-color: #000;
     color: #fff;
