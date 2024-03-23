@@ -9,14 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Evitar inyección de SQL utilizando declaraciones preparadas
         $estado = "Activa";
-        $fechaActual = date("Y-m-d");
 
-        $query = $conn->prepare("INSERT INTO pqrs (tipo, descripcion, fecha, estado, cliente_idCliente) VALUES (?, ?, ?, ?, ?)");
-        $query->bind_param("ssssi", $tipo, $descripcion, $fecha, $estado, $cliente_idCliente);
+        $query = $conn->prepare("INSERT INTO pqrs (tipo, descripcion, estado, cliente_idCliente) VALUES (?, ?, ?, ?)");
+        $query->bind_param("sssi", $tipo, $descripcion, $estado, $cliente_idCliente);
 
         $tipo = $_POST["servicio"];
         $descripcion = $_POST["descripcion"];
-        $fecha = $fechaActual;
         $cliente_idCliente = $_SESSION["rol"];
 
         if ($query->execute()) {
@@ -34,4 +32,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 echo json_encode(array("success" => $success, "mensaje" => $mensaje));
-?>
