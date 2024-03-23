@@ -1,7 +1,11 @@
 $(document).ready(function () {
     cargarPQRS();
 
-    function cargarPQRS() {
+    function cargarPQRS() {   
+
+        if ($.fn.DataTable.isDataTable('#tablaPQRS')) {
+            $('#tablaPQRS').DataTable().destroy();
+        }
         $.ajax({
             url: "pqrsdb_ajax.php",
             method: "GET",
@@ -43,6 +47,7 @@ $(document).ready(function () {
 
                     $("#t_pqrs").append(newRow);
                 });
+                
                 $('#tablaPQRS').DataTable({
                     "language": {
                         "sProcessing": "Procesando...",

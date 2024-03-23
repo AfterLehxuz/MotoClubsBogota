@@ -116,7 +116,8 @@ $stmt->close();
                         <input type="password" class="form-control" id="password" name="password">
                     </div>
                     <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar cambios</button>
-                    <button type="button" id="cancelarEdicion" class="btn btn-secondary">Cancelar</button>
+                   
+                    <a href="ventas.php"><button type="button" id="cancelarEdicion" class="btn btn-secondary">Cancelar</button></a>
 
                 </form>
             </div>
