@@ -90,7 +90,7 @@ $stmt->close();
         </header>
         <div class="perfil">
             <div class="reservas-inicio">
-                <h1>dashboard</h1>
+                <h1>DASHBOARD</h1>
                 <div class="card">
                     <div class="container">
                         <canvas id="grafico"></canvas>
