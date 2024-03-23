@@ -98,7 +98,7 @@ button:hover {
 .iniciar-secion {
     height: 400px;
     width: 450px;
-    background-color: rgba(248, 248, 255, 0.8); 
+    background-color: rgba(248, 248, 255, 0.9); 
     margin: 100px auto;
     border: 2px solid black;
     border-radius: 10px;
@@ -190,3 +190,4 @@ button:hover {
     position: relative;
    top: -450px;
 }
+
