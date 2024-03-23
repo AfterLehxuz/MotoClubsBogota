@@ -1,10 +1,9 @@
-
 $(document).ready(function () {
     var procesando = false;
 
     $("#buscarProducto").autocomplete({
         source: function (request, response) {
-            if (!procesando) { 
+            if (!procesando) {
                 $.ajax({
                     type: "POST",
                     url: "inventario_ajax.php",
@@ -53,7 +52,7 @@ $(document).ready(function () {
             "<td>" + producto.costo + "</td>" +
             "<td>" + producto.descripcion + "</td>" +
             "<td>" + producto.nombre + "</td>" +
-            "<td>" + producto.provedor+ "</td>" +
+            "<td>" + producto.provedor + "</td>" +
             "<td><input type='number' id='inputCantidad' value='1' min='1'></td>" +
             "<td><img src='" + producto.rutaImagen + "' alt='Imagen' style='width:50px;height:50px;'></td>" +
             "<td>" +
@@ -125,35 +124,63 @@ $(document).ready(function () {
                     $(".producto-encontrado tbody").empty();
                     $("#buscarProducto").val("");
 
-       
+
                     $("#buscarProducto").autocomplete("enable");
                     $("#buscarProducto").prop("disabled", false);
                 }
             });
         });
     }
-    function cargarTodosLosProductos() {
+     function cargarTodosLosProductos() {
         $.ajax({
             type: "POST",
             url: "cargar_productos.php",
             dataType: "json",
             success: function (data) {
-                $("#t_pro").empty();
-                $.each(data, function (index, producto) {
-                    
-                    $("#t_pro").append("<tr>" +
-                        "<td>" + producto.codigo_producto + "</td>" +
-                        "<td>" + producto.costo + "</td>" +
-                        "<td>" + producto.descripcion + "</td>" +
-                        "<td>" + producto.nombre + "</td>" +
-                        "<td>" + producto.cantidad + "</td>" +
-                        "<td>" + producto.proveedor_nombre + "</td>" +
-                        "<td><img src='" + producto.rutaImagen + "' alt='Imagen' style='width:50px;height:50px;'></td>" +
-                        "<td>" + producto.eliminarBoton + producto.editarBoton + "</td>" +
-                        "</tr>"
-                    )
-                })
-
+                $("#t_pro").empty(); // Limpiar la tabla antes de agregar nuevos datos
+                if (data.length > 0) { // Verificar si hay datos disponibles
+                    $.each(data, function (index, producto) {
+                        $("#t_pro").append("<tr>" +
+                            "<td>" + producto.codigo_producto + "</td>" +
+                            "<td>" + producto.costo + "</td>" +
+                            "<td>" + producto.descripcion + "</td>" +
+                            "<td>" + producto.nombre + "</td>" +
+                            "<td>" + producto.cantidad + "</td>" +
+                            "<td>" + producto.proveedor_nombre + "</td>" +
+                            "<td><img src='" + producto.rutaImagen + "' alt='Imagen' style='width:50px;height:50px;'></td>" +
+                            "<td>" + producto.eliminarBoton + producto.editarBoton + "</td>" +
+                            "</tr>"
+                        );
+                    });
+                    $('#tablaProductos').DataTable({
+                        "language": {
+                            "sProcessing": "Procesando...",
+                            "sLengthMenu": "Mostrar _MENU_ registros",
+                            "sZeroRecords": "No se encontraron resultados",
+                            "sEmptyTable": "Ningún dato disponible en esta tabla",
+                            "sInfo": "Mostrando registros del START al END de un total de TOTAL registros",
+                            "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                            "sInfoFiltered": "(filtrado de un total de MAX registros)",
+                            "sInfoPostFix": "",
+                            "sSearch": "Buscar:",
+                            "sUrl": "",
+                            "sInfoThousands": ",",
+                            "sLoadingRecords": "Cargando...",
+                            "oPaginate": {
+                                "sFirst": "Primero",
+                                "sLast": "Último",
+                                "sNext": "Siguiente",
+                                "sPrevious": "Anterior"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                            }
+                        },
+                        "pagingType": "full_numbers", 
+                         
+                    });
+                }
             },
             error: function (xhr, status, error) {
                 console.error("Error en la solicitud AJAX: " + status + " - " + error);
@@ -161,6 +188,7 @@ $(document).ready(function () {
             }
         });
     }
+
 
     $(document).on("click", "#editar-producto", function () {
         var idProducto = $(this).data("id");
@@ -208,5 +236,4 @@ $(document).ready(function () {
             }
         });
     });
-
-});
+})

@@ -176,12 +176,15 @@ button:hover {
 
 .perfil h1 {
     margin: 20px 0; 
-    font-size: 24px;
-    text-align: center; 
+   
+    text-align: center;
+    font-weight: bold; 
 }
 
 .perfil h2{
     text-align: center; 
+    font-weight: bold; 
+    
 }
 
 .perfil form {
@@ -203,12 +206,7 @@ button:hover {
     border-radius: 4px;
 }
 
-.perfil input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
+
 
 .table {
     width: 100%;

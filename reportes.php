@@ -28,12 +28,14 @@ $stmt->close();
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
     <script src="javaScript/reportes.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,19 +52,19 @@ $stmt->close();
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
+            <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
             <?php endif; ?>
             <li><a href="reservadb.php"><span><i class='bx bx-check-double'></i></span>Reservas</a></li>
             <li><a href="pqrsdb.php"><span><i class='bx bx-question-mark'></i></span>PQRS</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1): ?>
-                <li><a href="clientes.php"><span><i class='bx bx-question-mark'></i></span>Clientes</a></li>
+            <li><a href="clientes.php"><span><i class='bx bx-question-mark'></i></span>Clientes</a></li>
             <?php endif; ?>
             <li><a href="reportes.php"><span><i class='bx bx-question-mark'></i></span>Reportes</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
+            <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
             <?php endif; ?>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
+            <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
             <?php endif; ?>
         </ul>
     </aside>
@@ -74,14 +76,15 @@ $stmt->close();
                 </span>
             </div>
             <div class="contenido-perfil">
-    <?php if (isset($_SESSION["nombre"]) && !empty($_SESSION["nombre"])): ?>
-        <div class="foto">
-            <a href="perfil.php"><span class="nombre-usuario"><?php echo $_SESSION["nombre"]; ?></span></a>
-        </div>
-        <a href="logout.php"><button>Cerrar sesión</button></a>
-    <?php endif; ?>
-</div>
-
+                <?php if (isset ($_SESSION["nombre"]) && !empty ($_SESSION["nombre"])): ?>
+                <div class="foto">
+                    <span class="nombre-usuario">
+                        <?php echo $_SESSION["nombre"]; ?>
+                    </span>
+                </div>
+                <a href="logout.php"><button>Cerrar sesión</button></a>
+                <?php endif; ?>
+            </div>
         </header>
 
         <div class="perfil">
@@ -103,6 +106,7 @@ $stmt->close();
                                 class="btn btn-outline-danger">Generar
                                 PDF<span><i class='bi bi-file-pdf'></i></span></button>
                         </form>
+
                     </div>
                 </div>
 
@@ -110,7 +114,7 @@ $stmt->close();
                 <div class="card">
                     <div class="card-body">
 
-                        <table class="table table-striped table-bordered" id="reporte">
+                        <table id="tablaReportes" class="table table-striped table-bordered" id="reporte">
                             <thead class="table-dark">
                                 <tr>
                                     <th scope="col">Fecha</th>
@@ -132,9 +136,6 @@ $stmt->close();
             </div>
         </div>
     </div>
-
-
-    
 </body>
 
 </html>

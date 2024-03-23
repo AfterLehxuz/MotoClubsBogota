@@ -168,3 +168,23 @@
     border-radius: 10%;
     margin-bottom: 5px; /* Ajusta este margen según tu preferencia */
   }
+
+  .btn-primary {
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin: -10px auto 10px; /* Ajusta los márgenes para que el botón se eleve un poco */
+    text-align: center; /* Esto centra el texto dentro del botón */
+    width: 150px; /* Ajusta el ancho del botón según tus necesidades */
+    padding: 10px; /* Ajusta el espaciado interno del botón según tus necesidades */
+    font-weight: bold;
+    border-radius: 10px; /* Negrita para el texto del botón */
+}
+
+/* Estilos para el estado de hover */
+.btn-primary:hover {
+    color: #000; /* Cambiar el color del texto a negro cuando se pasa el cursor por encima */
+    background-color: #0069d9;
+    border-color: #0062cc;
+    font-weight: bold; /* Negrita para el texto del botón */
+}

@@ -1,291 +1,293 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  a {
-    text-decoration: none !important;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    min-height: 100vh;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  aside .log {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    text-transform: uppercase;
-    color: white;
-    gap: 10px;
-  }
-  
-  .log > img {
-    height: 40px;
-  }
-  
-  img {
-    max-width: 150px;
-    max-height: 150px;
-  }
-  
-  aside ul > li {
-    padding: 20px;
-  }
-  
-  aside ul li a > span {
-    margin: 10px;
-    color: white;
-  }
-  
-  aside ul li {
-    text-transform: uppercase;
-  }
-  
-  aside ul li:hover {
-   background-color: red;
-      
-   border-radius: 5%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
-  }
-  
-  aside ul li a {
-    color: #ffffff !important
-  }
-  
-  .contenido {
-    margin-left: 200px;
-  }
-  
-  .contenido header {
-    height: 50px;
-    width: 100%;
-    background-color: gray;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-  }
-  
-  .contenido-rol {
-    background-color: #f0f0f0; 
-    padding: 10px; 
-    border-radius: 100px;
-    text-align: center; 
-    font-size: 16px; 
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    padding:5px 10px 5px 10px;
+body {
+  background-color: #efefef;
+}
 
-  }
+body {
+  background-image: url('Imagenes/man-person-black-and-white-sport-vehicle-motorcycle-927575-pxhere.com.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la URL o la ruta de tu imagen */
+  background-size: 101%;
+  background-position: center top 10px; /* Centra la imagen de fondo en la parte superior con un desplazamiento vertical de 100px */
+  background-repeat: no-repeat; /*  Evita la repetición de la imagen */
+  background-position: right -10px top; /* Mueve la imagen de fondo hacia la derecha y la desplaza 10px desde el borde derecho */
+  background-repeat: repeat; 
   
-  .contenido-perfil {
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .contenido-perfil > img {
-    border-radius: 12px;
-  }
-  
-  .contenido-perfil span {
-    padding: 0 10px;
-    font-size: 25px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .contenido-perfil span:hover {
-    color: #222222;
-    
-  }
-  
-  .foto {
-    display: flex;
-    align-items: center;
-    background-color:#01baff;
-    border-radius: 5px;
-    font-weight: bold;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+li {
+  list-style: none;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside .log {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-transform: uppercase;
+  color: white;
+  gap: 10px;
+}
+
+.log > img {
+  height: 40px;
+  border-radius: 10%;
+  margin-bottom: 5px;
+}
+
+
+img {
+  max-width: 150px;
+  max-height: 150px;
+}
+aside ul > li {
+  padding: 20px;
+}
+
+aside ul li a > span {
+  margin: 10px;
+  color: white;
+}
+
+
+aside ul li {
+  text-transform: uppercase;
+}
+
+aside ul li:hover {
+  background-color: red;
+  transition: 1s;
+}
+
+aside ul li a {
+  color: #ffffff !important
+}
+
+.contenido {
+  margin-left: 200px;
+
+}
+
+.contenido header {
+  height: 50px;
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.contenido-rol {
+  background-color: #f0f0f0; 
+  padding: 10px; 
+  border-radius: 100px;
+  text-align: center; 
+  font-size: 16px; 
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  padding:5px 10px 5px 10px;
+
+
+}
+
+.contenido-perfil {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contenido-perfil > img {
+  border-radius: 12px;
+}
+
+.contenido-perfil span {
+  padding: 0 10px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+.contenido-perfil span:hover {
+  color: #222222;
+}
+
+.foto {
+  display: flex;
+  align-items: center;
+  background-color:#01baff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.perfil {
+  position: relative;
+  margin: 40px 20px;
+  border: 2px solid black;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
 }
   
-  
-  .perfil {
-    position: relative;
-    margin: 40px 20px;
-    border: 2px solid black;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
-  }
-  
+.reservas-inicio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card {
-    background-color: rgba(255, 255, 255, 0.865);
-    border-top: 1.5px black solid!important;
-    display: grid;
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: rgba(255, 255, 255, 0.865);
+  border-top: 1.5px black solid!important;
+  display: grid;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 
 }
 
 .card-body {
-    padding: 20px; 
-    
-    
+  padding: 20px; 
+  
+  
 }
 
 .search-item label {
-    font-weight: bold; 
+  font-weight: bold; 
 }
 
 .table {
-    width: 100%;
-    margin-bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .table th, .table td {
-    text-align: center; 
+  text-align: center; 
 }
 
 .col {
-    margin-bottom: 10px;
-   
+  margin-bottom: 10px;
+ 
 }
 
 .btnProcesar {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .search-item input#buscarProducto {
-    height: 40px;
-    width: 100%; 
-    padding: 10px; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
-    margin-bottom: 10px; 
+  height: 40px;
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  margin-bottom: 10px; 
 }
 
 .table-responsive {
-    overflow-x: auto; 
+  overflow-x: auto; 
 }
 
 .table {
-    width: 100%;
-    margin-bottom: 0;
-    border-collapse: collapse; 
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: collapse; 
 }
 
 
 
 .bxs-trash {
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px; 
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 5px; 
 }
 .bxs-trash {
-    transition: background-color 0.5s ease; 
+  transition: background-color 0.5s ease; 
 }
 
 .bxs-trash:hover {
-    background-color: rgb(182, 1, 1);
+  background-color: rgb(182, 1, 1);
 }
 .reservas-inicio{
-    display: grid;
-    gap: 5px;
-    flex-wrap: wrap;
-    border: 60px;
+  display: grid;
+  gap: 5px;
+  flex-wrap: wrap;
+  border: 60px;
 
 }
 
 button {
-  height: 40px;
-  margin-right: 10px;
-  margin-left: 10px;
-  background-color: transparent;
-  text-transform: uppercase;
-  padding: 4px;
-  border: 1px solid #ffff;
-  color: #ffff;
-  font-weight: 600;
+height: 40px;
+margin-right: 10px;
+margin-left: 10px;
+background-color: transparent;
+text-transform: uppercase;
+padding: 4px;
+border: 1px solid #ffff;
+color: #ffff;
+font-weight: 600;
 }
 
 button:hover {
-  background-color: white;
-  color: black;
-  transition: 1s;
+background-color: white;
+color: black;
+transition: 1s;
 }
 
+
+
+.card {
+background-color: rgba(255, 255, 255, 0.865);
+border-top: 1.5px black solid!important;
+display: grid;
+padding: 10px;
+margin: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
 
 .card-body {
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
-
-.card-body .col-child div {
-  background-color: #f0f0f0; 
-  padding: 10px; 
-  border-radius: 5px;
-  text-align: center; 
-  font-size: 16px; 
-  color: #333;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+.card-body img {
+width: 100%;
+max-height: 400px;
+max-width: 600px;
+display: block;
+margin-bottom: 20px;
 }
 
-
-
-.card-body .col-child {
-  flex: 1;
-  box-sizing: border-box;
-  width: calc(25% - 10px); 
-  margin-bottom: 10px; 
-}
-.grafico {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.barra {
-  display: flex;
-  align-items: center;
-}
-
-progress {
-  width: 200px;
-  height: 20px;
-}
-
-progress::-webkit-progress-value {
-  background-color: #007bff; /* Color de la barra de progreso */
-}
-
-.log img {
-  border-radius: 10%;
-  margin-bottom: 5px; /* Ajusta este margen según tu preferencia */
+.card-body p{
+margin-bottom: 20px;
+justify-content: center;
+text-align: center;
 }

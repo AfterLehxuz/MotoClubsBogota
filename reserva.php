@@ -23,19 +23,19 @@ session_start();
     <script src="javaScript/slider.js"></script>
     <style>
     .logo img {
-        border-radius: 10%; /* Esto hace que la imagen sea redonda */
+        border-radius: 10%;
+        /* Esto hace que la imagen sea redonda */
     }
+    </style>
 
-</style>
-    
 </head>
 
 
 <body>
     <header>
-    <a href="index.php" class="logo"> 
-        <img src="Imagenes/Logo.png" alt="Icono de la empresa">MOTO ClUB'S BOGOTÁ
-    </a>
+        <a href="index.php" class="logo">
+            <img src="Imagenes/Logo.png" alt="Icono de la empresa">MOTO ClUB'S BOGOTÁ
+        </a>
         <nav>
             <ul>
                 <li id="inicio"><a href="index.php">Inicio</a></li>
@@ -64,22 +64,29 @@ session_start();
     </header>
     <section class="general">
         <div class="slider-container">
-                <div class="slider-item">
-                    <img src="Imagenes/images.jpeg" alt="Imagen 1" style="filter: blur(3px);">
-                    <h2><strong>Mantenimiento general</h2>
-                    <p>Potencia la durabilidad y el rendimiento de tu moto con nuestro servicio de Mantenimiento General. Desde ajustes precisos hasta revisiones exhaustivas, cuidamos cada detalle para asegurar que tu moto esté siempre en su mejor forma. Confía en nosotros para mantenerla lista para la carretera.
-                    ¡Haz que cada viaje sea suave y emocionante con nuestro servicio de Mantenimiento General para motos!</strong></p>
-                    <a href="hacer_reserva.php"><button>Reservar</button></a>
-                </div>
             <div class="slider-item">
-                <img  src="Imagenes/Sia.png" alt="Imagen 1" style="filter: blur(3px);">
-                <h2>Sincronizacion</h2>
-                <p><strong>Experimenta la máxima armonía en cada paseo con nuestro servicio de Sincronización para motos. Ajustamos cada componente con precisión para optimizar el rendimiento del motor, garantizando una conducción suave y eficiente. Confía en nosotros para sincronizar tu moto y disfruta de la potencia en perfecta sintonía.
-                Haz que cada viaje sea una experiencia excepcional con nuestro servicio de Sincronización para motos.</strong></p>
+                <img src="Imagenes/images.jpeg" alt="Imagen 1" style="filter: blur(3px);">
+                <h2><strong>Mantenimiento general</h2>
+                <p>Potencia la durabilidad y el rendimiento de tu moto con nuestro servicio de Mantenimiento General.
+                    Desde ajustes precisos hasta revisiones exhaustivas, cuidamos cada detalle para asegurar que tu moto
+                    esté siempre en su mejor forma. Confía en nosotros para mantenerla lista para la carretera.
+                    ¡Haz que cada viaje sea suave y emocionante con nuestro servicio de Mantenimiento General para
+                    motos!</strong></p>
                 <a href="hacer_reserva.php"><button>Reservar</button></a>
             </div>
             <div class="slider-item">
-                <img src="Imagenes/Siiiaa.png" alt="Imagen 1" style="filter: blur(3px);">
+                <img src="Imagenes/Sia.png" alt="Imagen 1" style="filter: blur(3px);">
+                <h2>Sincronizacion</h2>
+                <p><strong>Experimenta la máxima armonía en cada paseo con nuestro servicio de Sincronización para
+                        motos. Ajustamos cada componente con precisión para optimizar el rendimiento del motor,
+                        garantizando una conducción suave y eficiente. Confía en nosotros para sincronizar tu moto y
+                        disfruta de la potencia en perfecta sintonía.
+                        Haz que cada viaje sea una experiencia excepcional con nuestro servicio de Sincronización para
+                        motos.</strong></p>
+                <a href="hacer_reserva.php"><button>Reservar</button></a>
+            </div>
+            <div class="slider-item">
+                <img src="Imagenes/Siiiaa.png" alt="Imagen 1" style="filter: blur(3-{{px);">
                 <h2>Reparacion de motor</h2>
                 <p><strong>Devuelve la potencia y la confiabilidad a tu moto con nuestro servicio experto de Reparación de Motor.</strong></p>
                 <a href="hacer_reserva.php"><button>Reservar</button></a>

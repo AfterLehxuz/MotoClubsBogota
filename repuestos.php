@@ -14,6 +14,12 @@
     <script src="javaScript/repuestos_ajax.js"></script>
     <title>Repuestos</title>
     <style>
+          h1 {
+            font-size: 27px; /* Tamaño de letra ajustado */
+            margin-top: 20px; /* Espacio superior añadido */
+            text-align: center;
+
+        }
     .logo img {
         border-radius: 10%; /* Esto hace que la imagen sea redonda */
     }
@@ -92,7 +98,7 @@
         </nav>
     </header>
     <section>
-        <h1>Catalogo de Lista de productos y repuestos</h1>
+        <h1>CATALOGO DE PRODUCTOS Y REPUESTOS</h1>
         <div id="productos-recientes" class="productos-recientes">
 
         </div>

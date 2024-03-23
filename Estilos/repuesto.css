@@ -11,6 +11,14 @@ body{
   font-size: 16px;
 }
 
+body {
+    background-image: url('Imagenes/t-road-motorcyclist-at-black-and-white-sport-motorcycle-isolated-on-white-background-2HBYYTA.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la URL o la ruta de tu imagen */
+    background-size: 100%;
+    background-position: center top 1px; /* Centra la imagen de fondo en la parte superior con un desplazamiento vertical de 100px */
+    background-repeat: no-repeat; /*  Evita la repetición de la imagen */
+    background-position: right 0px top; /* Mueve la imagen de fondo hacia la derecha y la desplaza 10px desde el borde derecho */
+    background-repeat: no-repeat; 
+}
 header {
     height: 50px;
     width: 100%;
@@ -117,18 +125,23 @@ button:hover {
 }
 
 .productos-recientes .producto img{
-    width: 90%;
-    filter: drop-shadow(0 50px 20px #0009);
+    width: 250px; /* Hace que todas las imágenes ocupen el ancho completo del contenedor */
+    height: 260px; /* Ajusta la altura deseada */
+    object-fit: cover; /* Mantiene la proporción de aspecto y recorta la imagen si es necesario */
+    border-radius: 10px; 
+   
+
 }
 
 .productos-recientes .producto{
     display: flex;
     flex-direction: column;
-    background-color: #eeeee6;
+    background-color: rgba(238, 238, 230, 0.8); 
     padding: 20px;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
+    border: 1px black solid;
     
 }
 
@@ -204,5 +217,10 @@ footer {
     font-weight: bold;
   }
 
-
+  .productos-recientes .producto h2,
+  .productos-recientes .producto p,
+  .productos-recientes .producto .costo {
+      text-align: center;
+      font-weight: bold;
+  }
 

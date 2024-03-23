@@ -34,9 +34,11 @@ $stmt->close();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="javaScript/reservadb_servicio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -46,24 +48,24 @@ $stmt->close();
 </head>
 
 <body>
-<aside>
+    <aside>
         <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">MOTO ClUB'S BOGOTÁ</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
+            <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
             <?php endif; ?>
             <li><a href="reservadb.php"><span><i class='bx bx-check-double'></i></span>Reservas</a></li>
             <li><a href="pqrsdb.php"><span><i class='bx bx-question-mark'></i></span>PQRS</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1): ?>
-                <li><a href="clientes.php"><span><i class='bx bx-question-mark'></i></span>Clientes</a></li>
+            <li><a href="clientes.php"><span><i class='bx bx-question-mark'></i></span>Clientes</a></li>
             <?php endif; ?>
             <li><a href="reportes.php"><span><i class='bx bx-question-mark'></i></span>Reportes</a></li>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
+            <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
             <?php endif; ?>
             <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Proveedores</a></li>
+            <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
             <?php endif; ?>
         </ul>
     </aside>
@@ -76,14 +78,12 @@ $stmt->close();
             </div>
             <div class="contenido-perfil">
                 <?php if (isset ($_SESSION["nombre"]) && !empty ($_SESSION["nombre"])): ?>
-                    <div class="foto">
+                <div class="foto">
                     <span class="nombre-usuario">
-    <a href="perfil.php" style="color: white;" onmouseover="this.style.color='#222222'" onmouseout="this.style.color='white'">
-        <?php echo $_SESSION["nombre"]; ?>
-    </a>
-</span>
-                    </div>
-                    <a href="logout.php"><button>Cerrar sesión</button></a>
+                        <?php echo $_SESSION["nombre"]; ?>
+                    </span>
+                </div>
+                <a href="logout.php"><button>Cerrar sesión</button></a>
                 <?php endif; ?>
             </div>
         </header>
@@ -109,7 +109,7 @@ $stmt->close();
                     <tbody id="t_res"></tbody>
                 </table>
                 <h2 class="todas-las-reservas">Total de reservas</h2>
-                <table class="reserva-en-tabla">
+                <table id="tablaReservas" class="reserva-en-tabla">
                     <thead>
                         <tr>
                             <th>Servicio</th>
@@ -119,11 +119,11 @@ $stmt->close();
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody id="t_tod">   </tbody>
+                    <tbody id="t_tod"></tbody>
                 </table>
-
             </div>
         </div>
+
 
     </div>
 </body>
