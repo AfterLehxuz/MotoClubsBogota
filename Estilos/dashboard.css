@@ -291,3 +291,15 @@ margin-bottom: 20px;
 justify-content: center;
 text-align: center;
 }
+
+h1 {
+  
+  text-align: center;
+  font-weight: bold;
+}
+
+.h2, h2 {
+  font-size: 2rem;
+  font-weight: bold;
+
+}
