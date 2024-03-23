@@ -134,7 +134,7 @@ function mostrarTodasReservas() {
                         editarReserva(reserva.idReserva);
                     }).addClass("btn btn-warning");
                     var btnVender = $("<button>").html("<span><i class='bx bx-folder-open'></i></span>").click(function () {
-                        venderReserva(reserva.idReserva);
+                      window.location.href="reportes.php";
                     }).addClass("btn btn-success");
 
                     acciones.append(btnEliminar, btnEditar, btnVender);

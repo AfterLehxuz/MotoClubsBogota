@@ -53,10 +53,7 @@
                             <span><i class='bx bx-lock-open-alt'></i></span>
                             <input type="password" name="password" placeholder="Contraseña" style="font-weight: bold; color: black;">
                         </div>
-                        <div class="recordar">
-                            <label for="recuerdame"><input type="checkbox" id="recuerdame"> Recuérdame</label>
-                            <a href="#"></a>
-                        </div>
+                        <br>
                         <button type="submit" id="btnLogin" style="background-color: black; color: white;">Iniciar sesión</button>
                         <div class="registrar"  style="margin-top: 10px;">
                         <p>¿No tienes cuenta? <a href="signup.php" style="color: red;">Regístrate</a></p>
