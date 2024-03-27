@@ -3,11 +3,11 @@ session_start();
 require_once "conexion.php";
 
 // Verificar la sesión
-if (!isset ($_SESSION["nombre"]) || empty ($_SESSION["nombre"])) {
+if (!isset($_SESSION["nombre"]) || empty($_SESSION["nombre"])) {
     header("Location: login.php");
     exit;
 }
-if (!isset ($_SESSION["rol_idRol"]) || ($_SESSION["rol_idRol"] != 1 && $_SESSION["rol_idRol"] != 2)) {
+if (!isset($_SESSION["rol_idRol"]) || ($_SESSION["rol_idRol"] != 1 && $_SESSION["rol_idRol"] != 2)) {
     header("Location: acceso_denegado.php");
     exit;
 }
@@ -35,8 +35,7 @@ $stmt->close();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="javaScript/ventas.js"></script>
     <meta charset="UTF-8">
@@ -54,20 +53,20 @@ $stmt->close();
         <a href="dashboard.php" class="log"><img src="Imagenes/Logo.png" alt="logo">MOTO ClUB'S BOGOTÁ</a>
         <ul>
             <li><a href="perfil.php"><span><i class='bx bx-face'></i></span>Perfil</a></li>
-            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2) : ?>
                 <li><a href="inventario.php"><span><i class='bx bxs-cabinet'></i></span>Inventario</a></li>
             <?php endif; ?>
             <li><a href="reservadb.php"><span><i class='bx bx-check-double'></i></span>Reservas</a></li>
-            <li><a href="pqrsdb.php"><span><i class='bx bx-question-mark'></i></span>PQRS</a></li>
-            <?php if ($_SESSION["rol_idRol"] == 1): ?>
-                <li><a href="clientes.php"><span><i class='bx bx-question-mark'></i></span>Clientes</a></li>
+            <li><a href="pqrsdb.php"><span><i class='bx bx-message-square-dots'></i></span>PQRS</a></li>
+            <?php if ($_SESSION["rol_idRol"] == 1) : ?>
+                <li><a href="clientes.php"><span><i class='bx bx-user'></i></span>Clientes</a></li>
             <?php endif; ?>
-            <li><a href="reportes.php"><span><i class='bx bx-question-mark'></i></span>Reportes</a></li>
-            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="ventas.php"><span><i class='bx bx-question-mark'></i></span>Ventas</a></li>
+            <li><a href="reportes.php"><span><i class='bx bxs-report'></i></span>Reportes</a></li>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2) : ?>
+                <li><a href="ventas.php"><span><i class='bx bx-shopping-bag'></i></span>Ventas</a></li>
             <?php endif; ?>
-            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2): ?>
-                <li><a href="provedores.php"><span><i class='bx bxs-cabinet'></i></span>Provedores</a></li>
+            <?php if ($_SESSION["rol_idRol"] == 1 || $_SESSION["rol_idRol"] == 2) : ?>
+                <li><a href="provedores.php"><span><i class='bx bx-scan'></i></span>Provedores</a></li>
             <?php endif; ?>
         </ul>
     </aside>
@@ -79,14 +78,14 @@ $stmt->close();
                 </span>
             </div>
             <div class="contenido-perfil">
-            <?php
-if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
-    echo '<div class="foto">';
-    echo '<a href="perfil.php"><span class="nombre-usuario">' . $_SESSION["nombre"] . '</span></a>';
-    echo '</div>';
-    echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
-}
-?>
+                <?php
+                if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
+                    echo '<div class="foto">';
+                    echo '<a href="perfil.php"><span class="nombre-usuario">' . $_SESSION["nombre"] . '</span></a>';
+                    echo '</div>';
+                    echo '<a href="logout.php"><button>Cerrar sesión</button></a>';
+                }
+                ?>
 
             </div>
         </header>
@@ -97,8 +96,7 @@ if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
                     <div class="card-body">
                         <div class="search-item">
                             <label for="buscarProducto">Buscar Producto</label><br>
-                            <input id="buscarProducto" type="text" name="buscarProducto"
-                                placeholder="Código o nombre del producto" autocomplete="off">
+                            <input id="buscarProducto" type="text" name="buscarProducto" placeholder="Código o nombre del producto" autocomplete="off">
                             <span class="text-danger" id="error_producto"></span>
                         </div>
                         <div class="table-responsive">
@@ -124,8 +122,7 @@ if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
                     <div class="card-body">
                         <div class="search-item">
                             <label for="buscarReserva">Buscar servicio</label><br>
-                            <input id="buscarReserva" type="text" name="buscarReserva" placeholder="Servicio"
-                                autocomplete="off">
+                            <input id="buscarReserva" type="text" name="buscarReserva" placeholder="Servicio" autocomplete="off">
                             <span class="text-danger" id="error_producto"></span>
                         </div>
                         <div class="table-responsive">
@@ -145,10 +142,8 @@ if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
                 <div class="card">
                     <div class="card-body">
                         <div class="col">
-                            <label for="buscarUsuario">Buscar Usuario</label><a href="registro_usuario.php"><button
-                                    id="registrar">Registrar</button></a>
-                            <input id="buscarUsuario" name="buscarUsuario" type="text"
-                                placeholder="Documento del usuario" autocomplete="off">
+                            <label for="buscarUsuario">Buscar Usuario</label><a href="registro_usuario.php"><button id="registrar">Registrar</button></a>
+                            <input id="buscarUsuario" name="buscarUsuario" type="text" placeholder="Documento del usuario" autocomplete="off">
                             <input hidden id="idUsuarios" name="idUsuarios">
                             <label for="nombre">Nombre</label>
                             <input id="nombre" name="nombre" placeholder="Nombre del usuario" readonly>
@@ -160,20 +155,17 @@ if (isset($_SESSION["nombre"]) && $_SESSION["nombre"] != '') {
                         <div class="col">
                             <div class="col-child">
                                 <label for="efectivo_recibido">Efectivo Recibido</label>
-                                <input id="efectivo_recibido" class="form-control" type="text" name="efectivo_recibido"
-                                    placeholder="Recibido">
+                                <input id="efectivo_recibido" class="form-control" type="text" name="efectivo_recibido" placeholder="Recibido">
                             </div>
                             <div class="col-child">
                                 <label for="cambio">Cambio</label>
-                                <input id="cambio" class="form-control" type="text" name="cambio" placeholder="Cambio"
-                                    disabled="">
+                                <input id="cambio" class="form-control" type="text" name="cambio" placeholder="Cambio" disabled="">
                             </div>
                         </div>
                         <div class="col">
                             <div class="col-child">
                                 <label for="total" class="font-weight-bold">Total a Pagar</label>
-                                <input id="total" class="form-control" type="text" name="total" placeholder="Total"
-                                    disabled="">
+                                <input id="total" class="form-control" type="text" name="total" placeholder="Total" disabled="">
                                 <button type="submit" id="btnGuardarDatos">Guardar datos</button>
                             </div>
                         </div>
