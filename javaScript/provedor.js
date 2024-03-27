@@ -107,4 +107,6 @@ $(document).ready(function() {
         var Nip = $(this).data("id");
         window.location.href = 'editar_provedor.php?id=' + Nip;
     });
+
+
 });

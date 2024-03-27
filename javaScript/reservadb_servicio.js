@@ -103,8 +103,6 @@ function editarReserva(idReserva) {
 
 
 function venderReserva(idReserva) {
-    
-
 }
 
 
@@ -134,7 +132,7 @@ function mostrarTodasReservas() {
                         editarReserva(reserva.idReserva);
                     }).addClass("btn btn-warning");
                     var btnVender = $("<button>").html("<span><i class='bx bx-folder-open'></i></span>").click(function () {
-                      window.location.href="reportes.php";
+                        venderReserva(reserva.idReserva);
                     }).addClass("btn btn-success");
 
                     acciones.append(btnEliminar, btnEditar, btnVender);
@@ -142,34 +140,6 @@ function mostrarTodasReservas() {
 
                     tbody.append(row);
                 });
-                $('#tablaReservas').DataTable({
-                    "language": {
-                        "sProcessing": "Procesando...",
-                        "sLengthMenu": "Mostrar _MENU_ registros", // Cambio aquí
-                        "sZeroRecords": "No se encontraron resultados",
-                        "sEmptyTable": "Ningún dato disponible en esta tabla",
-                        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-                        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-                        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
-                        "sInfoPostFix": "",
-                        "sSearch": "Buscar:",
-                        "sUrl": "",
-                        "sInfoThousands": ",",
-                        "sLoadingRecords": "Cargando...",
-                        "oPaginate": {
-                            "sFirst": "Primero",
-                            "sLast": "Último",
-                            "sNext": "Siguiente",
-                            "sPrevious": "Anterior"
-                        },
-                        "oAria": {
-                            "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
-                            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-                        }
-                    },
-                    "pagingType": "full_numbers",
-                    "lengthMenu": [10, 25, 50, 100] // Agregar este parámetro para mostrar las opciones
-                }); 
             } else {
                 console.error("Error al obtener todas las reservas.");
             }
